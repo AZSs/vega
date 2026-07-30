@@ -27,11 +27,14 @@ async def ingest_document(
     chat: ChatFn | None = None,
     embed: EmbedFn | None = None,
     resume: bool = False,
+    ollama_url: str = "http://localhost:11434",
+    embed_model: str = "bge-m3",
+    chat_model: str = "qwen2.5:7b",
 ) -> None:
     """流式 ingest:切章 → 每章 contextual 前缀 → embedding → 落 sqlite-vec。
 
     断点续跑:manifest.json 记 done 段号;resume=True 时跳过已 done。
-    chat/embed 省略则用 Ollama 真实实现(需 Ollama 运行)。
+    chat/embed 省略则用 Ollama 真实实现(ollama_url/embed_model/chat_model 配置)。
     """
     from .embed import make_ollama_chat, make_ollama_embedder
 
@@ -56,8 +59,8 @@ async def ingest_document(
     if resume and manifest_path.exists():
         done = set(json.loads(manifest_path.read_text()).get("done", []))
 
-    chat_fn = chat or make_ollama_chat()
-    embed_fn = embed or make_ollama_embedder()
+    chat_fn = chat or make_ollama_chat(base_url=ollama_url, model=chat_model)
+    embed_fn = embed or make_ollama_embedder(base_url=ollama_url, model=embed_model)
     doc_context = f"文档:{doc_id},共 {total} 段"
 
     # 维度:优先读已有库;否则探测首段
