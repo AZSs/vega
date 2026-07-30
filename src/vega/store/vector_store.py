@@ -73,6 +73,14 @@ class VectorStore:
     def count(self) -> int:
         return int(self.db.execute("SELECT COUNT(*) FROM vec").fetchone()[0])
 
+    def find_texts_containing(self, keyword: str, limit: int = 200) -> list[VectorHit]:
+        """文本搜索:返回所有包含 keyword 的块(按 segment_id 升序)。用于画像召回。"""
+        rows = self.db.execute(
+            "SELECT segment_id, text FROM texts WHERE text LIKE ? ORDER BY segment_id LIMIT ?",
+            (f"%{keyword}%", limit),
+        ).fetchall()
+        return [VectorHit(segment_id=int(s), score=1.0, text=t or "") for s, t in rows]
+
     def close(self) -> None:
         self.db.close()
 

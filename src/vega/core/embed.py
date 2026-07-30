@@ -48,19 +48,17 @@ async def embed_segments(segments: list[Segment], *, embed: EmbedFn) -> list[lis
 def make_ollama_embedder(
     base_url: str = "http://localhost:11434", model: str = "bge-m3"
 ) -> EmbedFn:
-    """构造 Ollama embedding 函数(真实用)。失败抛错,调用方降级。"""
+    """构造 Ollama embedding 函数(批量:一次请求 embed 多个文本)。失败抛错,调用方降级。"""
     import httpx
 
     async def embed(texts: list[str]) -> list[list[float]]:
-        out: list[list[float]] = []
-        async with httpx.AsyncClient(timeout=60) as client:
-            for t in texts:
-                resp = await client.post(f"{base_url}/api/embed", json={"model": model, "input": t})
-                resp.raise_for_status()
-                data = resp.json()
-                vec = data["embeddings"][0]
-                out.append([float(x) for x in vec])
-        return out
+        if not texts:
+            return []
+        async with httpx.AsyncClient(timeout=120) as client:
+            resp = await client.post(f"{base_url}/api/embed", json={"model": model, "input": texts})
+            resp.raise_for_status()
+            data = resp.json()
+            return [[float(x) for x in v] for v in data["embeddings"]]
 
     return embed
 

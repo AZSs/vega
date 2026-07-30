@@ -15,7 +15,7 @@ import numpy as np
 from ..plugins import DomainPlugin
 from ..plugins.novel import NovelPlugin
 from ..store import VectorStore
-from .embed import ChatFn, EmbedFn, annotate_context_prefix, embed_segments
+from .embed import ChatFn, EmbedFn, annotate_context_prefix
 
 
 async def ingest_document(
@@ -30,10 +30,13 @@ async def ingest_document(
     ollama_url: str = "http://localhost:11434",
     embed_model: str = "bge-m3",
     chat_model: str = "qwen2.5:7b",
+    limit: int | None = None,
+    context_prefix: bool = True,
 ) -> None:
-    """流式 ingest:切章 → 每章 contextual 前缀 → embedding → 落 sqlite-vec。
+    """流式 ingest:切章 → 子切块 → (可选)contextual 前缀 → 批量 embedding → 落 sqlite-vec。
 
     断点续跑:manifest.json 记 done 段号;resume=True 时跳过已 done。
+    context_prefix=False 关闭 LLM 上下文前缀(全文快速建库用,只 embed 原文)。
     chat/embed 省略则用 Ollama 真实实现(ollama_url/embed_model/chat_model 配置)。
     """
     from .embed import make_ollama_chat, make_ollama_embedder
@@ -50,6 +53,8 @@ async def ingest_document(
 
         document = segment_text(doc_id, text)
     segments = document.segments
+    if limit is not None:
+        segments = segments[:limit]
     total = len(segments)
     if total == 0:
         print(f"[vega] {doc_id} 无段,跳过")
@@ -71,20 +76,29 @@ async def ingest_document(
 
     pending = [s for s in segments if s.id not in done]
     for seg in pending:
-        print(f"[vega] {doc_id} 段 {seg.id}/{total - 1} contextual+embed...")
-        annotated = await annotate_context_prefix(seg, doc_context, chat=chat_fn)
+        # 子切块(整章 embed 会超 bge-m3 上下文长度,且粒度太粗)
+        from .chunk import chunk_text
+
+        chunks = chunk_text(seg.text, max_chars=500)
+        prefix = ""
+        if context_prefix:
+            annotated = await annotate_context_prefix(seg, doc_context, chat=chat_fn)
+            prefix = annotated.context_prefix
+        embed_inputs = [f"{prefix}\n{c}" if prefix else c for c in chunks]
         try:
-            vecs = await embed_segments([annotated], embed=embed_fn)
+            vecs = await embed_fn(embed_inputs)
         except Exception as e:
-            # embed 失败(Ollama 未启/超时):停止本轮,保留已完成进度,可 resume 续跑
             print(f"[vega] {doc_id} 段 {seg.id} embedding 失败,中断(可 --resume 续跑):{e}")
             break
-        vec = vecs[0] if vecs and vecs[0] else [0.0] * (dim or 1024)
-        # lazy 开库:首段确定 dim
         if store is None:
-            store = VectorStore(workdir, doc_id, dim=len(vec))
-        store.put(seg.id, np.array(vec, dtype=np.float32).tobytes(), annotated.text)
+            dim = len(vecs[0]) if vecs and vecs[0] else 1024
+            store = VectorStore(workdir, doc_id, dim=dim)
+        for c, v in zip(chunks, vecs, strict=True):
+            if v:
+                store.put(seg.id, np.array(v, dtype=np.float32).tobytes(), c)
         done.add(seg.id)
+        if seg.id % 50 == 0 or seg.id == total - 1:
+            print(f"[vega] {doc_id} 段 {seg.id}/{total - 1} 完成")
         _write_manifest(manifest_path, total, sorted(done))
 
     if store is not None:
