@@ -809,6 +809,7 @@ dependencies = [
     { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
     { name = "numpy", version = "2.5.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
     { name = "pydantic" },
+    { name = "sqlite-vec" },
 ]
 
 [package.optional-dependencies]
@@ -817,9 +818,6 @@ dev = [
     { name = "pytest" },
     { name = "pytest-cov" },
     { name = "ruff" },
-]
-vec = [
-    { name = "sqlite-vec" },
 ]
 
 [package.metadata]
@@ -831,6 +829,6 @@ requires-dist = [
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.0" },
     { name = "pytest-cov", marker = "extra == 'dev'" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.5" },
-    { name = "sqlite-vec", marker = "extra == 'vec'", specifier = ">=0.1" },
+    { name = "sqlite-vec", specifier = ">=0.1" },
 ]
-provides-extras = ["dev", "vec"]
+provides-extras = ["dev"]

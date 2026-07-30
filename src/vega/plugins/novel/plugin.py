@@ -9,10 +9,12 @@
 
 from __future__ import annotations
 
+import re
 from typing import Any
 
 from pydantic import BaseModel, Field
 
+from ...schemas import Document
 from ..base import DomainPlugin
 
 # ---- 领域属性 schema(小说专用)----
@@ -47,6 +49,9 @@ class CharacterProfileAttributes(BaseModel):
 
 ENTITY_TYPES = ["character", "faction", "item", "location", "concept"]
 RELATION_TYPES = ["师徒", "同门", "盟友", "仇敌", "亲属", "恋人", "主仆"]
+
+# 章题正则:第一章/第1章/第001章/第十二章/第一百零三章...
+_CHAPTER_RE = re.compile(r"第[零一二三四五六七八九十百千万0-9]+章")
 
 
 class NovelPlugin(DomainPlugin):
@@ -116,6 +121,32 @@ class NovelPlugin(DomainPlugin):
             if a not in cleaned:
                 cleaned.append(a)
         return cleaned
+
+    def split_chapters(self, doc_id: str, text: str) -> Document:
+        """按 第N章 章题切分,返回章级 Document(每章一段,含章题)。
+
+        无章题时整篇作一段(不丢)。领域专用(「章」在此合法);内核 segment_text 是通用切段。
+        """
+        from ...schemas import Segment
+
+        starts = [m.start() for m in _CHAPTER_RE.finditer(text)]
+        if not starts:
+            return Document(
+                id=doc_id,
+                segments=[Segment(id=0, text=text, char_start=0, char_end=len(text))],
+            )
+        # 去重保序(章题可能在一行内重复匹配?取首个)
+        starts = sorted(set(starts))
+        if starts[0] > 0:
+            # 章题前有前言:并入首章
+            starts[0] = 0
+        segments: list[Segment] = []
+        for i, s in enumerate(starts):
+            e = starts[i + 1] if i + 1 < len(starts) else len(text)
+            chunk = text[s:e]
+            if chunk.strip():
+                segments.append(Segment(id=len(segments), text=chunk, char_start=s, char_end=e))
+        return Document(id=doc_id, segments=segments)
 
 
 __all__ = [

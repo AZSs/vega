@@ -5,5 +5,6 @@
 """
 
 from .kg import KnowledgeStore
+from .vector_store import VectorHit, VectorStore
 
-__all__ = ["KnowledgeStore"]
+__all__ = ["KnowledgeStore", "VectorStore", "VectorHit"]
