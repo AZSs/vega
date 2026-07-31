@@ -131,7 +131,6 @@ class LightRAGEngine:
         不牺牲质量:每片完整跑 LightRAG 抽取+合并,最后合并 graph(同名实体描述拼接)。
         """
         import asyncio
-        import shutil
 
         document = self.plugin.split_sections(self.doc_id, text)
         chapters = [s.text for s in document.segments if s.text.strip()]
@@ -147,8 +146,12 @@ class LightRAGEngine:
                 continue
             shard_text = "\n\n".join(chapters[start:end])
             shard_dir = self.working_dir.parent / f"{self.doc_id}_shard_{i}"
-            if shard_dir.exists():
-                shutil.rmtree(shard_dir)
+            # P2.11 断点续跑:shard 已有 graphml → 跳过重跑(LightRAG LLM cache 也会跳已处理 chunk)
+            shard_graph = shard_dir / "lightrag" / "graph_chunk_entity_relation.graphml"
+            if shard_graph.exists():
+                print(f"[vega-lightrag] 分片 {i} 已完成(graphml 存在),跳过重跑")
+                shard_dirs.append(shard_dir)
+                continue
             shard_dirs.append(shard_dir)
             eng = LightRAGEngine(
                 str(self.working_dir.parent.parent),

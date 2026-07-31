@@ -89,9 +89,14 @@ Date: 2026-07-31
 
 ## 实施顺序
 
-1. **P0.1** vega retry.py 接入 llm.py + spica llm.ts（最高优先，防崩溃）
-2. **P0.2** spica VegaClient fetch 超时（防卡死）
-3. **P0.4** spica revisor 去重（防正文质量）
-4. **P1.6** vega shard 失败隔离（防分片全挂）
-5. **P1.9** spica Ollama retry（防向量断）
-6. **P2** 规模化后再做
+1. **P0.1** vega retry.py 接入 llm.py + spica llm.ts ✅
+2. **P0.2** spica VegaClient fetch 超时 ✅
+3. **P0.4** spica revisor 去重 ✅
+4. **P1.6** vega shard 失败隔离 ✅
+5. **P1.9** spica Ollama retry ✅
+6. **P1.7** vega profile 缓存失效 ✅
+7. **P1.8** spica journal 损坏恢复 ✅
+8. **P2.10** vega serve 并发控制(信号量) ✅
+9. **P2.11** vega LightRAG shard 断点续跑 ✅
+10. **P2.12** spica prompt 预算管理 ✅
+11. **P2.13** 成本监控(CostTracker) ✅

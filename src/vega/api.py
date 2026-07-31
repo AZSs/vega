@@ -10,6 +10,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import sqlite3
 from pathlib import Path
 from typing import Any
@@ -21,6 +22,9 @@ from .core.embed import make_ollama_embedder
 from .core.profile import synthesize_profile
 from .plugins import discover_plugins, load_plugin
 from .store import VectorStore
+
+# 全局信号量:限制同时进行的 profile 计算(防 DeepSeek 429 雪崩)
+_profile_semaphore = asyncio.Semaphore(2)
 
 
 class RetrieveRequest(BaseModel):
@@ -93,15 +97,19 @@ def create_app(*, workdir: str, config_path: str | None = None) -> FastAPI:
             return dict[str, Any](_json.loads(cache_file.read_text(encoding="utf-8")))
 
         # 优先 LightRAG 后端(graphml 存在);回退自建后端(vectors.sqlite)
-        if lightrag_graph.exists():
-            from .core.profile import build_profile_from_lightrag
+        # 信号量限并发:同时最多 2 个 profile 计算(防 DeepSeek 429 雪崩)
+        async with _profile_semaphore:
+            if lightrag_graph.exists():
+                from .core.profile import build_profile_from_lightrag
 
-            result = await build_profile_from_lightrag(workdir, doc_id, entity, alias_list, plug)
-        else:
-            dim = _dim_of(workdir, doc_id)
-            if dim is None:
-                raise HTTPException(404, f"未找到 {doc_id} 的知识库(先 ingest)")
-            result = await synthesize_profile(workdir, doc_id, entity, alias_list, plug)
+                result = await build_profile_from_lightrag(
+                    workdir, doc_id, entity, alias_list, plug
+                )
+            else:
+                dim = _dim_of(workdir, doc_id)
+                if dim is None:
+                    raise HTTPException(404, f"未找到 {doc_id} 的知识库(先 ingest)")
+                result = await synthesize_profile(workdir, doc_id, entity, alias_list, plug)
         if result is None:
             raise HTTPException(404, "无命中或合成失败")
         # 写缓存
