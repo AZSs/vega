@@ -159,9 +159,23 @@ class LightRAGEngine:
             n = end - start
             tasks.append(self._run_shard(i, eng, shard_text, n))
 
-        # 并行跑所有分片
+        # 并行跑所有分片(return_exceptions=True:1 个失败不拖垮其余)
         print(f"[vega-lightrag] {self.doc_id} 并行 ingest:{shards} 分片,{len(chapters)} 章")
-        await asyncio.gather(*tasks)
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        # 检查失败的分片(跳过失败的,合并成功的)
+        failed_shards = []
+        for i, r in enumerate(results):
+            if isinstance(r, Exception):
+                print(f"[vega-lightrag] 分片 {i} 失败(跳过):{r}")
+                failed_shards.append(i)
+        if failed_shards:
+            # 从 shard_dirs 移除失败的
+            shard_dirs = [sd for i, sd in enumerate(shard_dirs) if i not in failed_shards]
+            if not shard_dirs:
+                print("[vega-lightrag] 所有分片失败,无数据可合并")
+                return
+            print(f"[vega-lightrag] {len(shard_dirs)}/{shards} 分片成功,合并可用分片")
 
         # 合并 graph + text_chunks
         self._merge_shards(shard_dirs)
