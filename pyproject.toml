@@ -18,6 +18,16 @@ dev = [
     "ruff>=0.5",
     "mypy>=1.10",
 ]
+serve = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+]
+watch = [
+    "watchfiles>=0.21",
+]
+
+[project.entry-points."vega.plugins"]
+novel = "vega.plugins.novel:NovelPlugin"
 
 [project.scripts]
 vega = "vega.cli:main"

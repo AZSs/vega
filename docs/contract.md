@@ -39,14 +39,17 @@ Spica 侧:每本书一个 workdir(与 spica 的 workdir 隔离边界一致),`<wo
 
 **关键**:每个属性值都带 `mentions`(原文出处)。Spica 写作时若要核对"黄豆豆种族",读 `attributes.race.value` + 可回查 mentions,不再幻觉。
 
-## 检索接口(可选)
+## 检索接口(HTTP)
 
-Spica 也可直接调 vega 的检索(query → 带 Mention 的片段)。若 vega 以服务形态运行,暴露 HTTP:
+vega 以服务形态运行(`vega serve`),暴露 HTTP,供 spica 交互式查询:
 ```
-POST /retrieve  { doc_id, query, top_k }  →  [Mention, ...]
-GET  /profile/{doc_id}/{entity_id}        →  EntityProfile JSON
+GET  /plugins                            → {name: "module:Class"}  可用插件(注册表)
+GET  /docs/{doc_id}/entities             → [{name,type,aliases}]   KG 实体(抽取后)
+GET  /docs/{doc_id}/profile?entity=X&aliases=Y&plugin=novel  → 画像 JSON
+POST /docs/{doc_id}/retrieve  {query, top_k}  →  [{segment_id, score, text}]
 ```
-MVP 阶段优先文件契约(无服务)。
+- ingest(建库,批处理慢)→ 文件契约;query/profile(写作期实时)→ HTTP。
+- spica 永不 import vega(Python),靠 HTTP + JSON schema 契约。
 
 ## 契约演进
 

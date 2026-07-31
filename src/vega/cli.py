@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import sys
+from pathlib import Path
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -47,6 +48,15 @@ def main(argv: list[str] | None = None) -> int:
     p_query.add_argument("--ollama-url", default="http://localhost:11434")
     p_query.add_argument("--embed-model", default="bge-m3")
 
+    p_plugins = sub.add_parser("plugins", help="列出可用领域插件")
+    p_plugins.add_argument("--config", default=None, help="vega.toml 配置路径")
+
+    p_serve = sub.add_parser("serve", help="启动 HTTP 服务(供消费端交互式查询)")
+    p_serve.add_argument("--workdir", default="./vega-workspace")
+    p_serve.add_argument("--host", default="127.0.0.1")
+    p_serve.add_argument("--port", type=int, default=8765)
+    p_serve.add_argument("--config", default=None, help="vega.toml 插件配置路径")
+
     args = parser.parse_args(argv)
 
     if args.cmd == "ingest":
@@ -55,6 +65,10 @@ def main(argv: list[str] | None = None) -> int:
         return asyncio.run(_query(args))
     if args.cmd == "profile":
         return asyncio.run(_profile(args))
+    if args.cmd == "plugins":
+        return _plugins(args)
+    if args.cmd == "serve":
+        return _serve(args)
     print(f"[vega] {args.cmd} —— 尚未实现", file=sys.stderr)
     return 0
 
@@ -125,127 +139,46 @@ async def _query(args: argparse.Namespace) -> int:
 
 
 async def _profile(args: argparse.Namespace) -> int:
-    """合成实体画像:文本召回所有提到实体(主名+别名)的块 → 抽样 → LLM 结构化合成 → 打印。
-
-    名归一:主名+别名并集召回(不朽仙子=黄豆豆)。溯源:每块带 segment_id。
-    """
+    """合成实体画像(CLI:调 core/profile.synthesize_profile,打印)。"""
     import json
-    import re
-    import sqlite3
-    from pathlib import Path
 
-    from vega.core.llm import make_chat_from_env
-    from vega.store import VectorHit, VectorStore
+    from vega.core.profile import synthesize_profile
+    from vega.plugins import load_plugin
 
     db_path = Path(args.workdir) / args.doc_id / "vectors.sqlite"
     if not db_path.exists():
         print(f"[vega] 未找到 {args.doc_id} 的知识库(先 ingest)", file=sys.stderr)
         return 1
-    con = sqlite3.connect(str(db_path))
-    row = con.execute("SELECT sql FROM sqlite_master WHERE name='vec'").fetchone()
-    con.close()
-    if not row or "float[" not in row[0]:
-        print("[vega] 向量表缺失", file=sys.stderr)
-        return 1
-    dim = int(row[0].split("float[")[1].split("]")[0])
-
     aliases = [a.strip() for a in args.aliases.split(",") if a.strip()]
-    keywords = [args.entity] + aliases
-    store = VectorStore(args.workdir, args.doc_id, dim=dim)
-
-    # 召回所有提及实体(主名或别名)的块,去重
-    seen: set[str] = set()
-    mentions: list[VectorHit] = []
-    for kw in keywords:
-        for h in store.find_texts_containing(kw, limit=400):
-            if h.text and h.text not in seen:
-                seen.add(h.text)
-                mentions.append(h)
-    store.close()
-    mentions.sort(key=lambda h: h.segment_id)
-    print(f"[vega] 「{args.entity}」(含别名 {aliases})命中 {len(mentions)} 个块")
-
-    if not mentions:
-        print("[vega] 无命中,无法合成画像")
-        return 0
-
-    # 定向召回:含领域关注关键词的块优先(关键词由插件定义),否则均匀抽样漏关键事实
-    from vega.plugins import load_plugin
-
     plugin = load_plugin(args.plugin)
-    focus_kws = plugin.focus_keywords()
-    focus_ids: set[int] = set()
-    focus: list[VectorHit] = []
-    for h in mentions:
-        if any(k in h.text for k in focus_kws):
-            focus.append(h)
-            focus_ids.add(id(h))
-    print(f"[vega] 定向命中(关注关键词){len(focus)} 块")
+    result = await synthesize_profile(args.workdir, args.doc_id, args.entity, aliases, plugin)
+    if result is None:
+        print("[vega] 无命中或向量表缺失,无法合成画像")
+        return 1
+    print("\n=== 人物画像 ===")
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0
 
-    # 样本:定向块优先,超量则均匀裁剪;不足则用其余块补齐到 n_target
-    n_target = 80
-    rest = [h for h in mentions if id(h) not in focus_ids]
-    if len(focus) >= n_target:
-        step = len(focus) / n_target
-        sample = [focus[int(i * step)] for i in range(n_target)]
-    else:
-        n_fill = n_target - len(focus)
-        if len(rest) > n_fill:
-            rstep = len(rest) / n_fill
-            fill = [rest[int(i * rstep)] for i in range(n_fill)]
-        else:
-            fill = rest
-        sample = focus + fill
-    sample.sort(key=lambda h: h.segment_id)
-    print(f"[vega] 样本 {len(sample)} 块(定向 {len(focus)} 优先)")
-    alias_note = f"(别名:{'、'.join(aliases)})" if aliases else ""
-    chat_fn = make_chat_from_env()
 
-    # 两遍合成(防一锅烩搞混主角):pass1 逐片段抽目标角色事实 → pass2 聚合成画像
-    # 抽取 prompt / 字段表 / 画像 schema 全由领域插件提供,内核不感知领域
-    extract_sys = plugin.profile_extract_system()
-    fields = plugin.profile_fields()
-    all_facts: list[dict[str, object]] = []
-    for h in sample:
-        extract_user = (
-            f"目标角色:{args.entity}{alias_note}\n片段:[段{h.segment_id}] {h.text}\n"
-            f'输出 {{"facts":[{{"field":"{fields}","value":"...","seg":N}}]}}'
-        )
-        try:
-            raw = await chat_fn(extract_sys, extract_user)
-            m = re.search(r"\{[\s\S]*\}", raw)
-            if m:
-                facts = json.loads(m.group(0)).get("facts", [])
-                for f in facts:
-                    all_facts.append(f)
-        except Exception:
-            continue
-    print(f"[vega] pass1 抽取事实 {len(all_facts)} 条,pass2 聚合合成画像...")
+def _plugins(args: argparse.Namespace) -> int:
+    """列出可用领域插件(注册表:entry points + 配置 + 内置)。"""
+    from vega.plugins import discover_plugins
 
-    facts_block = json.dumps(all_facts, ensure_ascii=False, indent=1)[:8000]
-    merge_sys = (
-        "你是实体画像合成器。根据给定的事实列表(每条带来源段号 seg),"
-        "为指定实体合成结构化画像。只依据事实,不确定填 null,不要编造。只输出 JSON。"
-    )
-    merge_user = (
-        f"实体:{args.entity}{alias_note}\n\n事实列表:\n{facts_block}\n\n"
-        f"输出 JSON 格式(只依据事实,不确定填 null,不要编造):\n{plugin.profile_schema()}"
-    )
-    raw = await chat_fn(merge_sys, merge_user)
-    m = re.search(r"\{[\s\S]*\}", raw)
-    if m:
-        try:
-            parsed = json.loads(m.group(0))
-            print("\n=== 人物画像 ===")
-            print(json.dumps(parsed, ensure_ascii=False, indent=2))
-            print(
-                f"\n(基于 {len(sample)} 个抽样片段 / pass1 {len(all_facts)} 条事实,"
-                f"全文命中 {len(mentions)} 块)"
-            )
-            return 0
-        except json.JSONDecodeError:
-            pass
-    print("\n=== 画像(原文输出) ===\n", raw)
+    plugins = discover_plugins(args.config)
+    print("可用插件:")
+    for name, spec in sorted(plugins.items()):
+        print(f"  {name} -> {spec}")
+    return 0
+
+
+def _serve(args: argparse.Namespace) -> int:
+    """启动 HTTP 服务(FastAPI),供消费端(如 spica)交互式查询。"""
+    import uvicorn
+
+    from vega.api import create_app
+
+    app = create_app(workdir=args.workdir, config_path=args.config)
+    uvicorn.run(app, host=args.host, port=args.port)
     return 0
 
 
