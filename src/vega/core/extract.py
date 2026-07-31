@@ -69,4 +69,81 @@ async def extract_segment(
     return out
 
 
+async def extract_document(
+    workdir: str,
+    doc_id: str,
+    plugin: DomainPlugin,
+    *,
+    chat: ChatFn | None = None,
+    resume: bool = False,
+    filter_keywords: list[str] | None = None,
+) -> None:
+    """全量逐块抽取 → 落 KG(断点续跑)。
+
+    遍历向量库所有块,逐块 extract_segment → merge_entity 累积进 KG(带段级 Mention 溯源)
+    → 关系 add_relation。完成后 merge_aliases 名归一。kg_manifest.json 记 done rowid。
+    filter_keywords: 只抽含任一关键词的块(验证用,缩小范围;None=全量)。
+    """
+    import json
+    import sqlite3
+    from pathlib import Path
+
+    from ..store import KnowledgeStore, VectorStore
+    from .llm import make_chat_from_env
+    from .normalize import make_mention, merge_aliases, merge_entity
+
+    chat_fn = chat or make_chat_from_env()
+    vdb_path = Path(workdir) / doc_id / "vectors.sqlite"
+    con = sqlite3.connect(str(vdb_path))
+    row = con.execute("SELECT sql FROM sqlite_master WHERE name='vec'").fetchone()
+    con.close()
+    if not row or "float[" not in row[0]:
+        print(f"[vega] {doc_id} 无向量库(先 ingest)")
+        return
+    dim = int(row[0].split("float[")[1].split("]")[0])
+
+    vstore = VectorStore(workdir, doc_id, dim=dim)
+    chunks = vstore.all_texts()
+    vstore.close()
+
+    kg = KnowledgeStore(workdir, doc_id)
+    manifest_path = Path(workdir) / doc_id / "kg_manifest.json"
+    done: set[int] = set()
+    if resume and manifest_path.exists():
+        done = set(json.loads(manifest_path.read_text()).get("done", []))
+
+    total = len(chunks)
+    if filter_keywords:
+        chunks = [(r, s, t) for (r, s, t) in chunks if any(k in t for k in filter_keywords)]
+        print(f"[vega] {doc_id} filter={filter_keywords} 命中 {len(chunks)}/{total} 块")
+    total = len(chunks)
+    for idx, (rowid, seg_id, text) in enumerate(chunks):
+        if rowid in done or not text.strip():
+            continue
+        segment = Segment(id=seg_id, text=text)
+        mention = make_mention(doc_id, seg_id, len(text))
+        entities = await extract_segment(segment, plugin, chat=chat_fn, doc_id=doc_id)
+        for e in entities:
+            existing = kg.get_entity(e.name)
+            kg.set_entity(merge_entity(existing, e, mention))
+            for rel in e.relations:
+                kg.add_relation(e.name, rel.object, rel.type, mention)
+        done.add(rowid)
+        if idx % 50 == 0 or idx == total - 1:
+            print(f"[vega] {doc_id} 抽取 {idx + 1}/{total} 块,实体 {kg.count_entities()}")
+            manifest_path.write_text(json.dumps({"done": sorted(done)}))
+
+    # 名归一:别名相交的实体合并
+    all_ents = kg.list_entities()
+    merged = merge_aliases(all_ents)
+    if len(merged) < len(all_ents):
+        kg.clear_entities()
+        for ent in merged:
+            kg.set_entity(ent)
+        print(f"[vega] {doc_id} 名归一:{len(all_ents)} → {len(merged)} 实体")
+    kg.close()
+    manifest_path.write_text(json.dumps({"done": sorted(done)}))
+    print(f"[vega] {doc_id} 抽取完成:{len(done)}/{total} 块,{len(merged)} 实体")
+
+
 __all__ = ["ExtractedEntity", "ExtractedRelation", "extract_segment"]

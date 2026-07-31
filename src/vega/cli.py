@@ -40,6 +40,9 @@ def main(argv: list[str] | None = None) -> int:
     p_profile.add_argument("--workdir", default="./vega-workspace")
     p_profile.add_argument("--ollama-url", default="http://localhost:11434")
     p_profile.add_argument("--chat-model", default="qwen2.5:7b")
+    p_profile.add_argument(
+        "--kg", action="store_true", help="从 KG 聚合画像(全量+溯源,需先 extract)"
+    )
 
     p_query = sub.add_parser("query", help="语义检索:返回 top-k 相关片段")
     p_query.add_argument("doc_id")
@@ -50,6 +53,16 @@ def main(argv: list[str] | None = None) -> int:
 
     p_plugins = sub.add_parser("plugins", help="列出可用领域插件")
     p_plugins.add_argument("--config", default=None, help="vega.toml 配置路径")
+
+    p_extract = sub.add_parser("extract", help="全量逐块抽取实体/关系落 KG")
+    p_extract.add_argument("doc_id")
+    p_extract.add_argument("--plugin", default="novel")
+    p_extract.add_argument("--workdir", default="./vega-workspace")
+    p_extract.add_argument("--resume", action="store_true")
+    p_extract.add_argument("--config", default=None, help="vega.toml 插件配置路径")
+    p_extract.add_argument(
+        "--filter", default="", help="只抽含这些关键词的块(逗号分隔,验证用缩小范围)"
+    )
 
     p_serve = sub.add_parser("serve", help="启动 HTTP 服务(供消费端交互式查询)")
     p_serve.add_argument("--workdir", default="./vega-workspace")
@@ -65,6 +78,8 @@ def main(argv: list[str] | None = None) -> int:
         return asyncio.run(_query(args))
     if args.cmd == "profile":
         return asyncio.run(_profile(args))
+    if args.cmd == "extract":
+        return asyncio.run(_extract(args))
     if args.cmd == "plugins":
         return _plugins(args)
     if args.cmd == "serve":
@@ -139,24 +154,50 @@ async def _query(args: argparse.Namespace) -> int:
 
 
 async def _profile(args: argparse.Namespace) -> int:
-    """合成实体画像(CLI:调 core/profile.synthesize_profile,打印)。"""
+    """合成实体画像。--kg:从 KG 聚合(全量+溯源);否则快速两遍合成(抽样+LLM)。"""
     import json
 
-    from vega.core.profile import synthesize_profile
+    from vega.core.profile import build_profile_from_kg, synthesize_profile
     from vega.plugins import load_plugin
+
+    aliases = [a.strip() for a in args.aliases.split(",") if a.strip()]
+    plugin = load_plugin(args.plugin, getattr(args, "config", None))
+    if args.kg:
+        result = build_profile_from_kg(args.workdir, args.doc_id, args.entity, aliases, plugin)
+        if result is None:
+            print(f"[vega] KG 中未找到 {args.entity}(先 vega extract?)")
+            return 1
+        print("\n=== 人物画像(KG 聚合,全量+溯源) ===")
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0
 
     db_path = Path(args.workdir) / args.doc_id / "vectors.sqlite"
     if not db_path.exists():
         print(f"[vega] 未找到 {args.doc_id} 的知识库(先 ingest)", file=sys.stderr)
         return 1
-    aliases = [a.strip() for a in args.aliases.split(",") if a.strip()]
-    plugin = load_plugin(args.plugin)
     result = await synthesize_profile(args.workdir, args.doc_id, args.entity, aliases, plugin)
     if result is None:
         print("[vega] 无命中或向量表缺失,无法合成画像")
         return 1
     print("\n=== 人物画像 ===")
     print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0
+
+
+async def _extract(args: argparse.Namespace) -> int:
+    """全量逐块抽取实体/关系 → 落 KG(断点续跑)。"""
+    from vega.core.extract import extract_document
+    from vega.plugins import load_plugin
+
+    try:
+        plugin = load_plugin(args.plugin, getattr(args, "config", None))
+    except ValueError as e:
+        print(f"[vega] {e}", file=sys.stderr)
+        return 1
+    fks = [k.strip() for k in args.filter.split(",") if k.strip()] or None
+    await extract_document(
+        args.workdir, args.doc_id, plugin, resume=args.resume, filter_keywords=fks
+    )
     return 0
 
 

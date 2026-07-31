@@ -73,6 +73,13 @@ class VectorStore:
     def count(self) -> int:
         return int(self.db.execute("SELECT COUNT(*) FROM vec").fetchone()[0])
 
+    def all_texts(self) -> list[tuple[int, int, str]]:
+        """返回所有块 (rowid, segment_id, text),按 segment_id 升序。供全量抽取遍历。"""
+        rows = self.db.execute(
+            "SELECT rowid, segment_id, text FROM texts ORDER BY segment_id, rowid"
+        ).fetchall()
+        return [(int(r[0]), int(r[1]), r[2] or "") for r in rows]
+
     def find_texts_containing(self, keyword: str, limit: int = 200) -> list[VectorHit]:
         """文本搜索:返回所有包含 keyword 的块(按 segment_id 升序)。用于画像召回。"""
         rows = self.db.execute(

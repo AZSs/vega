@@ -111,4 +111,55 @@ async def synthesize_profile(
     return {"_raw": raw}
 
 
-__all__ = ["synthesize_profile"]
+def build_profile_from_kg(
+    workdir: str,
+    doc_id: str,
+    entity: str,
+    aliases: list[str],
+    plugin: DomainPlugin,
+) -> dict[str, Any] | None:
+    """从 KG 聚合实体画像(全量 mentions,无抽样,带溯源)。
+
+    纯聚合(无 LLM):实体 attributes 已带 mentions 溯源,events 按 segment_id 时序,
+    relations 带出处。比 synthesize_profile(抽样+LLM)更全更可信——每字段可回查原文。
+    """
+    from ..store import KnowledgeStore
+
+    kg = KnowledgeStore(workdir, doc_id)
+    ent = kg.get_entity(entity)
+    if ent is None:
+        # 别名查找
+        for e in kg.list_entities():
+            if entity in e.get("aliases", []) or any(a in e.get("aliases", []) for a in aliases):
+                ent = e
+                break
+    if ent is None:
+        kg.close()
+        return None
+
+    name = ent["name"]
+    relations_raw = kg.get_relations(name)
+    kg.close()
+
+    events = sorted(ent.get("mentions", []), key=lambda m: m.get("segment_id", 0))
+    relations = [
+        {
+            "target": r["object"] if r["subject"] == name else r["subject"],
+            "type": r["type"],
+            "mentions_count": len(r.get("mentions", [])),
+        }
+        for r in relations_raw
+    ]
+    return {
+        "name": name,
+        "aliases": ent.get("aliases", []),
+        "type": ent.get("type"),
+        "attributes": ent.get("attributes", {}),
+        "relations": relations,
+        "events": [{"seg": m.get("segment_id")} for m in events],
+        "mention_count": len(ent.get("mentions", [])),
+        "provenance": ent.get("mentions", []),
+    }
+
+
+__all__ = ["synthesize_profile", "build_profile_from_kg"]
