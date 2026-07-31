@@ -38,6 +38,43 @@ Vega 是一个**通用长文本知识引擎**：吃进任意长文本（小说�
 - embedding：Ollama 本地（bge-m3），可换
 - 与 spica（TS）跨语言，靠 JSON/SQLite 文件契约衔接
 
+## 快速开始
+
+```bash
+uv sync --extra dev --extra serve --extra watch
+
+# 1. 建库:长文本 → 切章 + contextual embedding + 向量持久化
+vega ingest book1 --file novel.txt --workdir ./ws
+
+# 2. 抽取:全量逐块抽实体/关系 → KG(带溯源)
+export DEEPSEEK_API_KEY=...   # 用强模型抽取(可选,否则走 Ollama)
+vega extract book1 --workdir ./ws --filter "主角,主角别名" --limit 300
+
+# 3. 画像:KG 聚合(全量+溯源,无 LLM 二次合成)
+vega profile book1 --entity 主角 --aliases "别名1,别名2" --workdir ./ws --kg
+
+# 4. 检索 / 服务
+vega query book1 "问题" --workdir ./ws
+vega serve --workdir ./ws         # HTTP: /profile /retrieve /entities /plugins
+```
+
+## 插件(领域可插拔)
+
+切换领域 = 实现一个 `DomainPlugin`,内核不改:
+
+```bash
+vega plugins                    # 列可用插件(注册表:entry points + 配置 + 内置)
+vega ingest ... --plugin novel  # 用 novel 插件(分章/修仙画像)
+```
+
+别人 `pip install vega-legal-plugin`(声明 entry point)→ 自动发现,`--plugin legal` 即用。
+本地开发:`vega.toml` `[plugins] legal = "my.mod:LegalPlugin"`。详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 状态
+
+🚧 step 1-2 已落地(切章/embedding/sqlite-vec + KG 抽取/名归一/画像聚合),真跑《谁让他修仙的》验证:黄豆豆画像 race=人族(228溯源)、不朽道果已拥有、143 条关系,每字段可回查原文。
+详见 [docs/roadmap.md](docs/roadmap.md)。
+
 ## 核心纪律
 
 1. **内核领域中立**：`src/vega/schemas/` 和 `src/vega/core/` 不得 import 任何领域插件。领域概念一律 `plugins/`。
