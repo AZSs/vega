@@ -66,12 +66,25 @@ def create_app(*, workdir: str, config_path: str | None = None) -> FastAPI:
         entity: str,
         aliases: str = "",
         plugin: str = "novel",
+        refresh: bool = False,
     ) -> dict[str, Any]:
         try:
             plug = load_plugin(plugin, config_path)
         except ValueError as e:
             raise HTTPException(400, str(e)) from None
         alias_list = [a.strip() for a in aliases.split(",") if a.strip()]
+
+        # 缓存:profile 计算慢(203 chunks × LLM),首次算完存 JSON,后续秒返
+        import hashlib
+        import json as _json
+
+        cache_key = hashlib.md5(
+            f"{doc_id}:{entity}:{','.join(alias_list)}:{plugin}".encode()
+        ).hexdigest()
+        cache_file = Path(workdir) / doc_id / f"profile_cache_{cache_key}.json"
+
+        if cache_file.exists() and not refresh:
+            return dict[str, Any](_json.loads(cache_file.read_text(encoding="utf-8")))
 
         # 优先 LightRAG 后端(graphml 存在);回退自建后端(vectors.sqlite)
         lightrag_graph = Path(workdir) / doc_id / "lightrag" / "graph_chunk_entity_relation.graphml"
@@ -86,6 +99,9 @@ def create_app(*, workdir: str, config_path: str | None = None) -> FastAPI:
             result = await synthesize_profile(workdir, doc_id, entity, alias_list, plug)
         if result is None:
             raise HTTPException(404, "无命中或合成失败")
+        # 写缓存
+        cache_file.parent.mkdir(parents=True, exist_ok=True)
+        cache_file.write_text(_json.dumps(result, ensure_ascii=False), encoding="utf-8")
         return result
 
     @app.post("/docs/{doc_id}/retrieve")
