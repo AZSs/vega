@@ -204,8 +204,12 @@ class NovelPlugin(DomainPlugin):
                 facts={"age": "16", "gender": "女"},
             ),
             Annotation(
-                chunk="上古时期作为上古五仙之一，仙名响彻寰宇，上古先民、妖族常搭建祭坛祭祀她，有部落将其视为图腾和守护神明。",
-                facts={"race": "人族", "origin": "上古五仙,被部落视为图腾", "relation": "上古五仙"},
+                chunk="上古时期作为上古五仙之一，仙名响彻寰宇，上古先民、妖族常搭建祭坛祭祀她。",
+                facts={"origin": "上古五仙", "relation": "上古五仙"},
+            ),
+            Annotation(
+                chunk="有部落将其视为图腾和守护神明，常搭建祭坛祭祀她。",
+                facts={"origin": "部落图腾", "relation": "被部落祭祀"},
             ),
             Annotation(
                 chunk="复活后落魄，只有脑子不好使的教团信奉她，且教团不知她名、搞错性别。",

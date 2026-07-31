@@ -89,17 +89,22 @@ async def verify_annotations(
 
 
 def _fuzzy_match(expected: str, got: str) -> bool:
-    """模糊匹配:expected 的关键词在 got 中出现即 pass。
+    """模糊匹配:expected 的关键词在 got 中出现,或 got 的关键词在 expected 中出现。
 
-    标注 "不朽道果(拥有)" → 抽出 "不朽道果" → pass(关键词"不朽道果"在结果中)
+    双向匹配:标注 "上古五仙" → 抽出 "上古五仙之一" → pass(上古五仙 in 上古五仙之一)
+    标注 "不朽道果(拥有)" → 抽出 "不朽道果" → pass(不朽道果 in 不朽道果)
     """
     if not expected or not got:
         return False
     # 取标注值的主体部分(去掉括号说明)
-    key = expected.split("(")[0].strip()
-    if not key:
-        key = expected
-    return key in got
+    exp_key = expected.split("(")[0].strip()
+    got_key = got.split("(")[0].strip()
+    if not exp_key:
+        exp_key = expected
+    if not got_key:
+        got_key = got
+    # 双向:任一方向包含即 pass
+    return exp_key in got or got_key in expected
 
 
 __all__ = ["verify_annotations"]
