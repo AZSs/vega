@@ -64,6 +64,7 @@ def main(argv: list[str] | None = None) -> int:
         "--filter", default="", help="只抽含这些关键词的块(逗号分隔,验证用缩小范围)"
     )
     p_extract.add_argument("--limit", type=int, default=None, help="抽样上限(均匀跨全书)")
+    p_extract.add_argument("--concurrency", type=int, default=5, help="并发抽取数")
 
     p_serve = sub.add_parser("serve", help="启动 HTTP 服务(供消费端交互式查询)")
     p_serve.add_argument("--workdir", default="./vega-workspace")
@@ -197,7 +198,13 @@ async def _extract(args: argparse.Namespace) -> int:
         return 1
     fks = [k.strip() for k in args.filter.split(",") if k.strip()] or None
     await extract_document(
-        args.workdir, args.doc_id, plugin, resume=args.resume, filter_keywords=fks, limit=args.limit
+        args.workdir,
+        args.doc_id,
+        plugin,
+        resume=args.resume,
+        filter_keywords=fks,
+        limit=args.limit,
+        concurrency=args.concurrency,
     )
     return 0
 

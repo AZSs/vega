@@ -91,6 +91,7 @@ async def extract_document(
     resume: bool = False,
     filter_keywords: list[str] | None = None,
     limit: int | None = None,
+    concurrency: int = 5,
 ) -> None:
     """全量逐块抽取 → 落 KG(断点续跑)。
 
@@ -137,21 +138,39 @@ async def extract_document(
             chunks = [chunks[int(i * step)] for i in range(limit)]
         print(f"[vega] {doc_id} limit={limit} 抽样 {len(chunks)} 块")
     total = len(chunks)
-    for idx, (rowid, seg_id, text) in enumerate(chunks):
-        if rowid in done or not text.strip():
-            continue
-        segment = Segment(id=seg_id, text=text)
-        mention = make_mention(doc_id, seg_id, len(text))
-        entities = await extract_segment(segment, plugin, chat=chat_fn, doc_id=doc_id)
-        for e in entities:
-            existing = kg.get_entity(e.name)
-            kg.set_entity(merge_entity(existing, e, mention))
-            for rel in e.relations:
-                kg.add_relation(e.name, rel.object, rel.type, mention)
-        done.add(rowid)
-        if idx % 50 == 0 or idx == total - 1:
-            print(f"[vega] {doc_id} 抽取 {idx + 1}/{total} 块,实体 {kg.count_entities()}")
-            manifest_path.write_text(json.dumps({"done": sorted(done)}))
+    pending_chunks = [(r, s, t) for (r, s, t) in chunks if r not in done and t.strip()]
+
+    import asyncio
+
+    sem = asyncio.Semaphore(concurrency)
+    batch_size = concurrency * 2
+
+    async def extract_one(
+        rowid: int, seg_id: int, text: str
+    ) -> tuple[int, int, str, list[ExtractedEntity]]:
+        async with sem:
+            seg = Segment(id=seg_id, text=text)
+            ents = await extract_segment(seg, plugin, chat=chat_fn, doc_id=doc_id)
+            return (rowid, seg_id, text, ents)
+
+    idx = 0
+    for i in range(0, len(pending_chunks), batch_size):
+        batch = pending_chunks[i : i + batch_size]
+        results = await asyncio.gather(*(extract_one(r, s, t) for r, s, t in batch))
+        # 串行落 KG(sqlite 单连接)
+        for rowid, seg_id, text, entities in results:
+            mention = make_mention(doc_id, seg_id, len(text))
+            for e in entities:
+                existing = kg.get_entity(e.name)
+                kg.set_entity(merge_entity(existing, e, mention))
+                for rel in e.relations:
+                    kg.add_relation(e.name, rel.object, rel.type, mention)
+            done.add(rowid)
+            idx += 1
+            if idx % 50 == 0 or idx == len(pending_chunks):
+                n_ent = kg.count_entities()
+                print(f"[vega] {doc_id} 抽取 {idx}/{len(pending_chunks)} 块,实体 {n_ent}")
+                manifest_path.write_text(json.dumps({"done": sorted(done)}))
 
     # 名归一不在此自动做:LLM 抽的别名噪声大(如「不朽仙人」被标 alias 不朽仙子,实为另一人)。
     # 改由 build_profile_from_kg 按用户提供的别名集 + 权重(mentions 数)合并,正名取最高频。
