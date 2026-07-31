@@ -71,6 +71,10 @@ def main(argv: list[str] | None = None) -> int:
     p_plugins = sub.add_parser("plugins", help="列出可用领域插件")
     p_plugins.add_argument("--config", default=None, help="vega.toml 配置路径")
 
+    p_verify = sub.add_parser("verify", help="标注验证:跑标注 test case,报 pass/fail")
+    p_verify.add_argument("--plugin", default="novel")
+    p_verify.add_argument("--config", default=None, help="vega.toml 配置路径")
+
     p_extract = sub.add_parser("extract", help="全量逐块抽取实体/关系落 KG")
     p_extract.add_argument("doc_id")
     p_extract.add_argument("--plugin", default="novel")
@@ -99,6 +103,8 @@ def main(argv: list[str] | None = None) -> int:
         return asyncio.run(_profile(args))
     if args.cmd == "extract":
         return asyncio.run(_extract(args))
+    if args.cmd == "verify":
+        return asyncio.run(_verify(args))
     if args.cmd == "plugins":
         return _plugins(args)
     if args.cmd == "serve":
@@ -241,6 +247,29 @@ async def _profile(args: argparse.Namespace) -> int:
     print("\n=== 人物画像 ===")
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
+
+
+async def _verify(args: argparse.Namespace) -> int:
+    """标注验证:跑标注 test case,报 pass/fail(标注即测试)。"""
+
+    from vega.core.verify import verify_annotations
+    from vega.plugins import load_plugin
+
+    try:
+        plugin = load_plugin(args.plugin, getattr(args, "config", None))
+    except ValueError as e:
+        print(f"[vega] {e}", file=sys.stderr)
+        return 1
+    result = await verify_annotations(plugin)
+    print("\n=== 标注验证 ===")
+    print(f"通过率: {result.get('pass_rate', '0/0')}")
+    print(f"通过: {result['passed']}  失败: {result['failed']}")
+    print("\n--- 明细 ---")
+    for d in result.get("details", []):
+        status = "✓" if d["pass"] else "✗"
+        print(f"  {status} {d['field']}: 期望={d['expected']}  实际={d['got']}")
+        print(f"    片段: {d['chunk']}...")
+    return 0 if result["failed"] == 0 else 1
 
 
 async def _extract(args: argparse.Namespace) -> int:

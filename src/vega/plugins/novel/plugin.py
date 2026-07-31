@@ -192,6 +192,14 @@ class NovelPlugin(DomainPlugin):
                 facts={"dao_fruit": "不朽道果(拥有)", "gender": "女"},
             ),
             Annotation(
+                chunk="不朽仙子的不朽道果之力犹如江河奔腾，浩瀚无边，一股无形的威压如山岳般倾轧而来。",
+                facts={"dao_fruit": "不朽道果(拥有)"},
+            ),
+            Annotation(
+                chunk="黄豆豆有自己的一套拳法，其中蕴含的寂灭道果之力犹如江河奔腾。",
+                facts={"dao_fruit": "寂灭道果(灰豆豆使用,非本体)"},
+            ),
+            Annotation(
                 chunk="她十六岁那年，体内的帝血初次异动。",
                 facts={"age": "16", "gender": "女"},
             ),
