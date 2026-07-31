@@ -53,15 +53,28 @@ async def extract_segment(
     except json.JSONDecodeError:
         return []
     out: list[ExtractedEntity] = []
+    # relations 可能在顶层(data["relations"])或 entity 内(e["relations"]),两处都收
+    top_rels: dict[str, list[ExtractedRelation]] = {}
+    for r in data.get("relations", []):
+        try:
+            rel = ExtractedRelation(
+                subject=str(r["subject"]), object=str(r["object"]), type=str(r["type"])
+            )
+            top_rels.setdefault(rel.subject, []).append(rel)
+        except (KeyError, TypeError):
+            continue
     for e in data.get("entities", []):
         try:
+            name = str(e["name"])
+            rels = [ExtractedRelation(**r) for r in e.get("relations", [])]
+            rels.extend(top_rels.get(name, []))
             out.append(
                 ExtractedEntity(
-                    name=str(e["name"]),
+                    name=name,
                     type=str(e.get("type", "character")),
                     aliases=[str(a) for a in e.get("aliases", [])],
                     attributes={k: str(v) for k, v in e.get("attributes", {}).items()},
-                    relations=[ExtractedRelation(**r) for r in e.get("relations", [])],
+                    relations=rels,
                 )
             )
         except (KeyError, TypeError):
@@ -77,6 +90,7 @@ async def extract_document(
     chat: ChatFn | None = None,
     resume: bool = False,
     filter_keywords: list[str] | None = None,
+    limit: int | None = None,
 ) -> None:
     """全量逐块抽取 → 落 KG(断点续跑)。
 
@@ -90,7 +104,7 @@ async def extract_document(
 
     from ..store import KnowledgeStore, VectorStore
     from .llm import make_chat_from_env
-    from .normalize import make_mention, merge_aliases, merge_entity
+    from .normalize import make_mention, merge_entity
 
     chat_fn = chat or make_chat_from_env()
     vdb_path = Path(workdir) / doc_id / "vectors.sqlite"
@@ -116,6 +130,12 @@ async def extract_document(
     if filter_keywords:
         chunks = [(r, s, t) for (r, s, t) in chunks if any(k in t for k in filter_keywords)]
         print(f"[vega] {doc_id} filter={filter_keywords} 命中 {len(chunks)}/{total} 块")
+    if limit is not None:
+        # 均匀抽样 limit 块(跨全书,覆盖早/中/晚)
+        if len(chunks) > limit:
+            step = len(chunks) / limit
+            chunks = [chunks[int(i * step)] for i in range(limit)]
+        print(f"[vega] {doc_id} limit={limit} 抽样 {len(chunks)} 块")
     total = len(chunks)
     for idx, (rowid, seg_id, text) in enumerate(chunks):
         if rowid in done or not text.strip():
@@ -133,17 +153,11 @@ async def extract_document(
             print(f"[vega] {doc_id} 抽取 {idx + 1}/{total} 块,实体 {kg.count_entities()}")
             manifest_path.write_text(json.dumps({"done": sorted(done)}))
 
-    # 名归一:别名相交的实体合并
-    all_ents = kg.list_entities()
-    merged = merge_aliases(all_ents)
-    if len(merged) < len(all_ents):
-        kg.clear_entities()
-        for ent in merged:
-            kg.set_entity(ent)
-        print(f"[vega] {doc_id} 名归一:{len(all_ents)} → {len(merged)} 实体")
+    # 名归一不在此自动做:LLM 抽的别名噪声大(如「不朽仙人」被标 alias 不朽仙子,实为另一人)。
+    # 改由 build_profile_from_kg 按用户提供的别名集 + 权重(mentions 数)合并,正名取最高频。
     kg.close()
     manifest_path.write_text(json.dumps({"done": sorted(done)}))
-    print(f"[vega] {doc_id} 抽取完成:{len(done)}/{total} 块,{len(merged)} 实体")
+    print(f"[vega] {doc_id} 抽取完成:{len(done)}/{total} 块,{kg.count_entities()} 实体")
 
 
 __all__ = ["ExtractedEntity", "ExtractedRelation", "extract_segment"]

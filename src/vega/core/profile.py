@@ -120,45 +120,81 @@ def build_profile_from_kg(
 ) -> dict[str, Any] | None:
     """从 KG 聚合实体画像(全量 mentions,无抽样,带溯源)。
 
-    纯聚合(无 LLM):实体 attributes 已带 mentions 溯源,events 按 segment_id 时序,
-    relations 带出处。比 synthesize_profile(抽样+LLM)更全更可信——每字段可回查原文。
+    名归一(权重驱动):合并「用户提供的别名集」{entity}∪aliases 中各 name 的实体,
+    正名取 mentions 最多的高频名(防低频噪声盖正名,如「不朽仙人」偶现不能盖「不朽仙子」)。
+    不并 LLM 抽的噪声别名(如「不朽仙人」被标 alias 不朽仙子,实为另一人)。
     """
     from ..store import KnowledgeStore
 
     kg = KnowledgeStore(workdir, doc_id)
-    ent = kg.get_entity(entity)
-    if ent is None:
-        # 别名查找
-        for e in kg.list_entities():
-            if entity in e.get("aliases", []) or any(a in e.get("aliases", []) for a in aliases):
-                ent = e
-                break
-    if ent is None:
+    name_set = {entity, *aliases}
+    # 只按 name 精确匹配用户别名集(不认 LLM 抽的 aliases,防噪声错并)
+    to_merge = [e for e in kg.list_entities() if e["name"] in name_set]
+    if not to_merge:
         kg.close()
         return None
 
-    name = ent["name"]
-    relations_raw = kg.get_relations(name)
+    # 权重:mentions 多的为正名(高频优先)
+    to_merge.sort(key=lambda e: len(e.get("mentions", [])), reverse=True)
+    canonical = to_merge[0]
+    name = canonical["name"]
+
+    # 聚合 attributes / mentions / aliases(带溯源,合并多实体)
+    attributes: dict[str, Any] = {}
+    all_mentions: list[dict[str, Any]] = []
+    alias_union: set[str] = set()
+    for e in to_merge:
+        for k, entry in e.get("attributes", {}).items():
+            if k not in attributes:
+                attributes[k] = {
+                    "value": entry.get("value"),
+                    "mentions": list(entry.get("mentions", [])),
+                }
+            else:
+                merged_entry = attributes[k]
+                merged_entry["mentions"] = merged_entry["mentions"] + list(
+                    entry.get("mentions", [])
+                )
+                if not merged_entry.get("value") and entry.get("value"):
+                    merged_entry["value"] = entry["value"]
+        all_mentions.extend(e.get("mentions", []))
+        for a in e.get("aliases", []):
+            if a not in name_set:
+                alias_union.add(a)
+    # relations:合并集里各实体的关系
+    relations_raw: list[dict[str, Any]] = []
+    for e in to_merge:
+        relations_raw.extend(kg.get_relations(e["name"]))
     kg.close()
 
-    events = sorted(ent.get("mentions", []), key=lambda m: m.get("segment_id", 0))
-    relations = [
-        {
-            "target": r["object"] if r["subject"] == name else r["subject"],
-            "type": r["type"],
-            "mentions_count": len(r.get("mentions", [])),
-        }
-        for r in relations_raw
-    ]
+    # relations 去重(subject/object/type)
+    seen_rel: set[tuple[str, str, str]] = set()
+    relations: list[dict[str, Any]] = []
+    for r in relations_raw:
+        key = (r["subject"], r["object"], r["type"])
+        if key in seen_rel:
+            continue
+        seen_rel.add(key)
+        relations.append(
+            {
+                "target": r["object"] if r["subject"] in name_set else r["subject"],
+                "type": r["type"],
+                "mentions_count": len(r.get("mentions", [])),
+            }
+        )
+
+    events = sorted(all_mentions, key=lambda m: m.get("segment_id", 0))
     return {
         "name": name,
-        "aliases": ent.get("aliases", []),
-        "type": ent.get("type"),
-        "attributes": ent.get("attributes", {}),
+        "canonical_weight": len(canonical.get("mentions", [])),
+        "merged_names": [e["name"] for e in to_merge],
+        "aliases": sorted(alias_union),
+        "type": canonical.get("type"),
+        "attributes": attributes,
         "relations": relations,
         "events": [{"seg": m.get("segment_id")} for m in events],
-        "mention_count": len(ent.get("mentions", [])),
-        "provenance": ent.get("mentions", []),
+        "mention_count": len(all_mentions),
+        "provenance_count": len(all_mentions),
     }
 
 

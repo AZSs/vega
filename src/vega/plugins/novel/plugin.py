@@ -87,12 +87,15 @@ class NovelPlugin(DomainPlugin):
         return (
             "你是小说实体抽取器。从下面这段小说正文中抽取实体与关系,只输出 JSON:\n"
             '{"entities":[{"name":"...","type":"character|faction|item|location|concept",'
-            '"aliases":[...],"attributes":{"race":"...","origin":"...",'
-            '"cultivation_stages":[...],"techniques":[...],"artifacts":[...]}}],'
-            '"relations":[{"subject":"...","object":"...",'
-            '"type":"师徒|同门|盟友|仇敌|亲属|恋人|主仆"}]}\n'
-            "要求:1) 别名含昵称/敬称/代词指代;2) 属性只填原文明确的,不确定不填;"
-            "3) 每个事实标注段内依据。不编造。\n\n"
+            '"aliases":[...],"attributes":{"race":"出身种族(人族/妖族/神族,非当前境界)",'
+            '"origin":"身世(部落/家族/遭遇,如部落被灭)","age":"年龄",'
+            '"cultivation_stages":["修为境界(如练气/筑基/仙人)"],'
+            '"techniques":["功法"],"artifacts":["法宝/持有物"],'
+            '"dao_fruit":"道果名及状态"}}],'
+            '"relations":[{"subject":"实体名","object":"另一实体名",'
+            '"type":"师徒|同门|盟友|仇敌|亲属|恋人|主仆|同辈仙人"}]}\n'
+            "要求:1) race 是【出身种族】不是当前境界(成仙后仍是人族,不填仙人);"
+            "2) 别名含昵称/敬称/指代;3) 属性只填原文明确的,不确定不填;4) 不编造。\n\n"
             f"正文:\n{segment_text}"
         )
 
