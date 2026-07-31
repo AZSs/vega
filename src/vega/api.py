@@ -83,11 +83,16 @@ def create_app(*, workdir: str, config_path: str | None = None) -> FastAPI:
         ).hexdigest()
         cache_file = Path(workdir) / doc_id / f"profile_cache_{cache_key}.json"
 
-        if cache_file.exists() and not refresh:
+        # 缓存失效:graphml 修改时间 > 缓存时间 → 过期重算
+        lightrag_graph = Path(workdir) / doc_id / "lightrag" / "graph_chunk_entity_relation.graphml"
+        cache_valid = cache_file.exists() and not refresh
+        if cache_valid and lightrag_graph.exists():
+            cache_valid = cache_file.stat().st_mtime > lightrag_graph.stat().st_mtime
+
+        if cache_valid:
             return dict[str, Any](_json.loads(cache_file.read_text(encoding="utf-8")))
 
         # 优先 LightRAG 后端(graphml 存在);回退自建后端(vectors.sqlite)
-        lightrag_graph = Path(workdir) / doc_id / "lightrag" / "graph_chunk_entity_relation.graphml"
         if lightrag_graph.exists():
             from .core.profile import build_profile_from_lightrag
 
