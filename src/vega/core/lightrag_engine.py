@@ -11,6 +11,7 @@ ingest / discover_entities / get_entity_with_sources 三个能力。
 from __future__ import annotations
 
 from collections.abc import Awaitable, Callable
+from pathlib import Path
 from typing import Any
 
 from ..plugins import DomainPlugin
@@ -122,6 +123,128 @@ class LightRAGEngine:
             done_n = min(i + batch, len(chapters))
             print(f"[vega-lightrag] {self.doc_id} 已喂 {done_n}/{len(chapters)} 章")
         print(f"[vega-lightrag] {self.doc_id} ingest 完成,{len(chapters)} 章")
+
+    async def ingest_parallel(self, text: str, shards: int = 4) -> None:
+        """并行分片 ingest(MapReduce):拆 N 片 → N 个 LightRAG 实例并行 → 合并 graph。
+
+        每片独立 working_dir + 独立 graph(小图合并快),N 片并行 ≈ Nx 加速。
+        不牺牲质量:每片完整跑 LightRAG 抽取+合并,最后合并 graph(同名实体描述拼接)。
+        """
+        import asyncio
+        import shutil
+
+        document = self.plugin.split_sections(self.doc_id, text)
+        chapters = [s.text for s in document.segments if s.text.strip()]
+        shard_size = (len(chapters) + shards - 1) // shards
+
+        # 创建 N 个分片引擎(各自独立 working_dir)
+        shard_dirs: list[Path] = []
+        tasks = []
+        for i in range(shards):
+            start = i * shard_size
+            end = min(start + shard_size, len(chapters))
+            if start >= end:
+                continue
+            shard_text = "\n\n".join(chapters[start:end])
+            shard_dir = self.working_dir.parent / f"{self.doc_id}_shard_{i}"
+            if shard_dir.exists():
+                shutil.rmtree(shard_dir)
+            shard_dirs.append(shard_dir)
+            eng = LightRAGEngine(
+                str(self.working_dir.parent.parent),
+                f"{self.doc_id}_shard_{i}",
+                self.plugin,
+                config=self.config,
+            )
+            n = end - start
+            tasks.append(self._run_shard(i, eng, shard_text, n))
+
+        # 并行跑所有分片
+        print(f"[vega-lightrag] {self.doc_id} 并行 ingest:{shards} 分片,{len(chapters)} 章")
+        await asyncio.gather(*tasks)
+
+        # 合并 graph + text_chunks
+        self._merge_shards(shard_dirs)
+        print(
+            f"[vega-lightrag] {self.doc_id} 并行 ingest 完成,{len(chapters)} 章,{shards} 分片已合并"
+        )
+
+    async def _run_shard(self, idx: int, eng: LightRAGEngine, text: str, n_chapters: int) -> None:
+        """跑单个分片。"""
+        print(f"[vega-lightrag] 分片 {idx} 开始 ({n_chapters} 章)")
+        await eng.ingest(text)
+        print(f"[vega-lightrag] 分片 {idx} 完成")
+
+    def _merge_shards(self, shard_dirs: list[Path]) -> None:
+        """合并 N 个分片的 graph + text_chunks 到主 working_dir。"""
+        import json
+        import shutil
+
+        import networkx as nx
+
+        self.working_dir.mkdir(parents=True, exist_ok=True)
+
+        # 合并 graph(NetworkX union,同名实体描述拼接)
+        merged = nx.Graph()
+        merged_chunks: dict[str, dict[str, Any]] = {}
+
+        for sd in shard_dirs:
+            graphml = sd / "graph_chunk_entity_relation.graphml"
+            if graphml.exists():
+                g = nx.read_graphml(str(graphml))
+                for nid, data in g.nodes(data=True):
+                    d = data or {}
+                    if merged.has_node(nid):
+                        existing = merged.nodes[nid]
+                        # 描述拼接 + source_id 合并
+                        existing["description"] = (
+                            str(existing.get("description", ""))
+                            + "<SEP>"
+                            + str(d.get("description", ""))
+                        )
+                        existing["source_id"] = (
+                            str(existing.get("source_id", ""))
+                            + "<SEP>"
+                            + str(d.get("source_id", ""))
+                        )
+                    else:
+                        merged.add_node(nid, **d)
+                for u, v, data in g.edges(data=True):
+                    d = data or {}
+                    if merged.has_edge(u, v):
+                        existing = merged.edges[u, v]
+                        existing["description"] = (
+                            str(existing.get("description", ""))
+                            + "<SEP>"
+                            + str(d.get("description", ""))
+                        )
+                    else:
+                        merged.add_edge(u, v, **d)
+
+            # 合并 text_chunks KV(供 get_entity_with_sources 反查原文)
+            chunks_file = sd / "kv_store_text_chunks.json"
+            if chunks_file.exists():
+                chunks = json.loads(chunks_file.read_text(encoding="utf-8"))
+                merged_chunks.update(chunks)
+
+        # 写入主 working_dir
+        nx.write_graphml(merged, str(self.working_dir / "graph_chunk_entity_relation.graphml"))
+        (self.working_dir / "kv_store_text_chunks.json").write_text(
+            json.dumps(merged_chunks, ensure_ascii=False), encoding="utf-8"
+        )
+        # 复制第一个分片的 LLM cache(避免重复抽取)
+        cache_src = shard_dirs[0] / "kv_store_llm_response_cache.json"
+        if cache_src.exists():
+            shutil.copy2(str(cache_src), str(self.working_dir / "kv_store_llm_response_cache.json"))
+
+        # 清理分片目录
+        for sd in shard_dirs:
+            shutil.rmtree(sd, ignore_errors=True)
+
+        print(
+            f"[vega-lightrag] 合并完成:{merged.number_of_nodes()} 节点,"
+            f"{merged.number_of_edges()} 边,{len(merged_chunks)} chunks"
+        )
 
     async def discover_entities(self) -> list[dict[str, Any]]:
         """自主发现全量实体(不靠用户种子)。从 graph storage 读所有节点。"""

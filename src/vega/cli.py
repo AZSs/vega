@@ -38,6 +38,9 @@ def main(argv: list[str] | None = None) -> int:
         help="底座:self=vega 自建(sqlite-vec+KG),lightrag=LightRAG 自主发现",
     )
     p_ingest.add_argument("--config", default=None, help="vega.toml 配置路径")
+    p_ingest.add_argument(
+        "--shards", type=int, default=1, help="并行分片数(>1 启用 MapReduce 并行)"
+    )
 
     p_profile = sub.add_parser("profile", help="合成实体画像(召回片段→LLM 结构化)")
     p_profile.add_argument("doc_id")
@@ -126,7 +129,10 @@ async def _ingest(args: argparse.Namespace) -> int:
 
         config = load_config(getattr(args, "config", None))
         engine = LightRAGEngine(args.workdir, args.doc_id, plugin, config=config)
-        await engine.ingest(text)
+        if args.shards > 1:
+            await engine.ingest_parallel(text, shards=args.shards)
+        else:
+            await engine.ingest(text)
         entities = await engine.discover_entities()
         print(f"\n[vega-lightrag] 自主发现 {len(entities)} 实体(前 20):")
         for ent in entities[:20]:
