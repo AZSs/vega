@@ -33,8 +33,9 @@ def main(argv: list[str] | None = None) -> int:
 
     p_profile = sub.add_parser("profile", help="合成实体画像(召回片段→LLM 结构化)")
     p_profile.add_argument("doc_id")
-    p_profile.add_argument("--entity", required=True, help="实体主名(如 黄豆豆)")
-    p_profile.add_argument("--aliases", default="", help="别名逗号分隔(如 不朽仙子,豆豆)")
+    p_profile.add_argument("--entity", required=True, help="实体主名")
+    p_profile.add_argument("--aliases", default="", help="别名逗号分隔")
+    p_profile.add_argument("--plugin", default="novel", help="领域插件")
     p_profile.add_argument("--workdir", default="./vega-workspace")
     p_profile.add_argument("--ollama-url", default="http://localhost:11434")
     p_profile.add_argument("--chat-model", default="qwen2.5:7b")
@@ -62,16 +63,18 @@ async def _ingest(args: argparse.Namespace) -> int:
     from pathlib import Path
 
     from vega.core.ingest import ingest_document
-    from vega.plugins.novel import NovelPlugin
+    from vega.plugins import load_plugin
 
-    if args.plugin != "novel":
-        print(f"[vega] 暂不支持插件:{args.plugin}(仅 novel)", file=sys.stderr)
+    try:
+        plugin = load_plugin(args.plugin)
+    except ValueError as e:
+        print(f"[vega] {e}", file=sys.stderr)
         return 1
     text = Path(args.file).read_text(encoding="utf-8")
     await ingest_document(
         args.doc_id,
         text,
-        NovelPlugin(),
+        plugin,
         workdir=args.workdir,
         resume=args.resume,
         ollama_url=args.ollama_url,
@@ -166,15 +169,18 @@ async def _profile(args: argparse.Namespace) -> int:
         print("[vega] 无命中,无法合成画像")
         return 0
 
-    # 定向召回:含出身/成仙关键词的块优先(部落/道果/寂灭/成仙/岁...),否则均匀抽样会漏关键事实
-    focus_kws = ["部落", "道果", "寂灭", "成仙", "十六岁", "岁", "族人", "灭族", "废"]
+    # 定向召回:含领域关注关键词的块优先(关键词由插件定义),否则均匀抽样漏关键事实
+    from vega.plugins import load_plugin
+
+    plugin = load_plugin(args.plugin)
+    focus_kws = plugin.focus_keywords()
     focus_ids: set[int] = set()
     focus: list[VectorHit] = []
     for h in mentions:
         if any(k in h.text for k in focus_kws):
             focus.append(h)
             focus_ids.add(id(h))
-    print(f"[vega] 定向命中(出身/成仙关键词){len(focus)} 块")
+    print(f"[vega] 定向命中(关注关键词){len(focus)} 块")
 
     # 样本:定向块优先,超量则均匀裁剪;不足则用其余块补齐到 n_target
     n_target = 80
@@ -195,24 +201,15 @@ async def _profile(args: argparse.Namespace) -> int:
     alias_note = f"(别名:{'、'.join(aliases)})" if aliases else ""
     chat_fn = make_chat_from_env()
 
-    # 两遍合成(防一锅烩搞混主角):
-    # pass1 逐片段只抽关于目标角色的事实(滤掉其他角色) → pass2 聚合成画像
-    extract_sys = (
-        "你从小说片段中提取【只关于指定角色】的事实。"
-        "片段里会出现其他角色,只提取明确关于目标角色的事实,他人的忽略。"
-        "重点关注:出身种族(人族/妖族等,区别于当前境界)、身世(部落/家族/遭遇,如部落被灭)、"
-        "年龄、道果(道果名及状态,如 寂灭道果 被废)、修为境界、成仙相关(如何成仙/成仙前代价/复活)、"
-        "化身或复活形态(如复活后使用某道果的另一个自我)、"
-        "关系网(含所属群体如同辈仙人组合/上古四仙,及个体关系如师徒/恋人/好友)。"
-        "无则 facts 空数组。只输出 JSON。"
-    )
+    # 两遍合成(防一锅烩搞混主角):pass1 逐片段抽目标角色事实 → pass2 聚合成画像
+    # 抽取 prompt / 字段表 / 画像 schema 全由领域插件提供,内核不感知领域
+    extract_sys = plugin.profile_extract_system()
+    fields = plugin.profile_fields()
     all_facts: list[dict[str, object]] = []
     for h in sample:
         extract_user = (
             f"目标角色:{args.entity}{alias_note}\n片段:[段{h.segment_id}] {h.text}\n"
-            '输出 {"facts":[{"field":"race|origin|age|dao_fruit|gender|appearance|'
-            'personality|cultivation|technique|artifact|relation|immortalization|event",'
-            '"value":"...","seg":N}]}'
+            f'输出 {{"facts":[{{"field":"{fields}","value":"...","seg":N}}]}}'
         )
         try:
             raw = await chat_fn(extract_sys, extract_user)
@@ -227,21 +224,12 @@ async def _profile(args: argparse.Namespace) -> int:
 
     facts_block = json.dumps(all_facts, ensure_ascii=False, indent=1)[:8000]
     merge_sys = (
-        "你是小说人物画像合成器。根据给定的事实列表(每条带来源段号 seg),"
-        "为指定角色合成结构化人物画像。只依据事实,不确定填 null,不要编造。只输出 JSON。"
+        "你是实体画像合成器。根据给定的事实列表(每条带来源段号 seg),"
+        "为指定实体合成结构化画像。只依据事实,不确定填 null,不要编造。只输出 JSON。"
     )
     merge_user = (
-        f"角色:{args.entity}{alias_note}\n\n事实列表:\n{facts_block}\n\n"
-        "输出 JSON 格式:\n"
-        '{"name":"...","race":"出身种族(人族/妖族等,非当前境界)",'
-        '"origin":"身世出身(部落/家族/遭遇,如部落被灭)",'
-        '"age":"年龄","dao_fruit":"道果及状态(如寂灭道果,成仙前被废)",'
-        '"gender":"性别","appearance":"外貌","personality":"性格",'
-        '"cultivation_stages":[{"stage":"境界","from_seg":N}],'
-        '"techniques":["功法"],"artifacts":["法宝/持有物"],'
-        '"relations":[{"target":"角色","type":"关系"}],'
-        '"key_events":[{"seg":N,"desc":"事件"}],'
-        '"immortalization_path":"成仙路径(如何成仙,代价是什么)"}'
+        f"实体:{args.entity}{alias_note}\n\n事实列表:\n{facts_block}\n\n"
+        f"输出 JSON 格式(只依据事实,不确定填 null,不要编造):\n{plugin.profile_schema()}"
     )
     raw = await chat_fn(merge_sys, merge_user)
     m = re.search(r"\{[\s\S]*\}", raw)

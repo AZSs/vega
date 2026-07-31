@@ -13,7 +13,6 @@ from pathlib import Path
 import numpy as np
 
 from ..plugins import DomainPlugin
-from ..plugins.novel import NovelPlugin
 from ..store import VectorStore
 from .embed import ChatFn, EmbedFn, annotate_context_prefix
 
@@ -45,13 +44,8 @@ async def ingest_document(
     doc_dir.mkdir(parents=True, exist_ok=True)
     manifest_path = doc_dir / "manifest.json"
 
-    # 切段(novel 插件用 split_chapters;通用插件回退 segment_text)
-    if isinstance(plugin, NovelPlugin):
-        document = plugin.split_chapters(doc_id, text)
-    else:
-        from .segment import segment_text
-
-        document = segment_text(doc_id, text)
+    # 切段:领域插件定义分段策略(小说分章/法律分条),内核不感知
+    document = plugin.split_sections(doc_id, text)
     segments = document.segments
     if limit is not None:
         segments = segments[:limit]
