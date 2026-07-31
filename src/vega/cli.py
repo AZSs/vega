@@ -31,6 +31,12 @@ def main(argv: list[str] | None = None) -> int:
     p_ingest.add_argument(
         "--no-context", action="store_true", help="关闭 contextual 前缀(全文快速建库)"
     )
+    p_ingest.add_argument(
+        "--backend",
+        choices=["self", "lightrag"],
+        default="self",
+        help="底座:self=vega 自建(sqlite-vec+KG),lightrag=LightRAG 自主发现",
+    )
 
     p_profile = sub.add_parser("profile", help="合成实体画像(召回片段→LLM 结构化)")
     p_profile.add_argument("doc_id")
@@ -93,7 +99,6 @@ def main(argv: list[str] | None = None) -> int:
 async def _ingest(args: argparse.Namespace) -> int:
     from pathlib import Path
 
-    from vega.core.ingest import ingest_document
     from vega.plugins import load_plugin
 
     try:
@@ -102,6 +107,32 @@ async def _ingest(args: argparse.Namespace) -> int:
         print(f"[vega] {e}", file=sys.stderr)
         return 1
     text = Path(args.file).read_text(encoding="utf-8")
+    if args.limit:
+        # 限章:只取前 N 章(切章后截断)
+        document = plugin.split_sections(args.doc_id, text)
+        text = "\n\n".join(s.text for s in document.segments[: args.limit])
+
+    if args.backend == "lightrag":
+        from vega.core.embed import make_ollama_embedder
+        from vega.core.lightrag_engine import LightRAGEngine
+        from vega.core.llm import make_chat_from_env
+
+        engine = LightRAGEngine(
+            args.workdir,
+            args.doc_id,
+            plugin,
+            chat=make_chat_from_env(),
+            embed=make_ollama_embedder(args.ollama_url, args.embed_model),
+        )
+        await engine.ingest(text)
+        entities = await engine.discover_entities()
+        print(f"\n[vega-lightrag] 自主发现 {len(entities)} 实体(前 20):")
+        for ent in entities[:20]:
+            print(f"  {ent['name']} ({ent['type']}) degree={ent['degree']}")
+        return 0
+
+    from vega.core.ingest import ingest_document
+
     await ingest_document(
         args.doc_id,
         text,
@@ -111,7 +142,6 @@ async def _ingest(args: argparse.Namespace) -> int:
         ollama_url=args.ollama_url,
         embed_model=args.embed_model,
         chat_model=args.chat_model,
-        limit=args.limit,
         context_prefix=not args.no_context,
     )
     return 0
