@@ -13,8 +13,12 @@
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
+from typing import TYPE_CHECKING
 
 from ..schemas import Document
+
+if TYPE_CHECKING:
+    from .annotation import Annotation
 
 
 class DomainPlugin(ABC):
@@ -59,8 +63,20 @@ class DomainPlugin(ABC):
         """画像召回优先关键词(领域定义,如小说:部落/道果/成仙)。默认空。"""
         return []
 
+    def annotated_examples(self) -> list[Annotation]:
+        """用户标注的示例(chunk → 正确属性)。用于 few-shot prompt + test case。
+
+        用户不写 prompt,只标 5-10 个代表性 chunk 的正确属性。
+        系统从 schema + 标注自动拼装 prompt。标注同时是 test case(pass/fail 验证)。
+        默认空(无标注时回退到 profile_extract_system 通用 prompt)。
+        """
+        return []
+
     def profile_extract_system(self) -> str:
-        """画像 pass1 逐片段抽取的 system prompt(领域定义:该抽哪些维度)。"""
+        """画像 pass1 逐片段抽取的 system prompt。
+
+        优先用 annotated_examples() 自动拼装;无标注时用此默认 prompt。
+        """
         return (
             "你从片段中提取【只关于指定角色】的事实。片段里会出现其他角色,"
             "只提取明确关于目标角色的事实,他人的忽略。无则 facts 空数组。只输出 JSON。"

@@ -15,6 +15,7 @@ from typing import Any
 from pydantic import BaseModel, Field
 
 from ...schemas import Document
+from ..annotation import Annotation
 from ..base import DomainPlugin
 
 # ---- 领域属性 schema(小说专用)----
@@ -179,20 +180,49 @@ class NovelPlugin(DomainPlugin):
             "不朽道果",
         ]
 
+    def annotated_examples(self) -> list[Annotation]:
+        """用户标注的 few-shot 示例(从《谁让他修仙的》黄豆豆标注,可按需替换)。"""
+        return [
+            Annotation(
+                chunk="不朽仙子想了想，自己刚刚复活，仙魂弱小。但自己怎么说也是堂堂仙人，在上古时期叱咤风云。",
+                facts={"gender": "女", "race": "人族", "revival": "已复活,仙魂弱小"},
+            ),
+            Annotation(
+                chunk="是了，一定是他们成仙之前被我揍的次数太多，又看我成仙时结出不朽道果，嫉妒我的才华！",
+                facts={"dao_fruit": "不朽道果(拥有)", "gender": "女"},
+            ),
+            Annotation(
+                chunk="她十六岁那年，体内的帝血初次异动。",
+                facts={"age": "16", "gender": "女"},
+            ),
+            Annotation(
+                chunk="上古时期作为上古五仙之一，仙名响彻寰宇，上古先民、妖族常搭建祭坛祭祀她，有部落将其视为图腾和守护神明。",
+                facts={"race": "人族", "origin": "上古五仙,被部落视为图腾", "relation": "上古五仙"},
+            ),
+            Annotation(
+                chunk="复活后落魄，只有脑子不好使的教团信奉她，且教团不知她名、搞错性别。",
+                facts={"revival": "已复活,落魄", "relation": "被教团信奉"},
+            ),
+        ]
+
     def profile_extract_system(self) -> str:
+        """优先用标注拼装;无标注时回退此 prompt。"""
+        from ..annotation import build_prompt_from_annotations
+
+        annotations = self.annotated_examples()
+        if annotations:
+            return build_prompt_from_annotations(
+                self.profile_schema(),
+                self.profile_fields(),
+                annotations,
+                "目标角色",
+                [],
+            )
         return (
             "你从小说片段中提取【只关于指定角色】的事实。"
             "片段里会出现其他角色,只提取明确关于目标角色的事实,他人的忽略。\n"
-            "【推断规则——必须执行】\n"
-            "1. dao_fruit:原文出现'X道果'(任何搭配:之力/结出/使用/被废/拥有/修炼等),提取X为道果名+状态。\n"
-            "2. age:原文出现'X岁'/'十六岁'等,提取年龄。原文提到'少年/少女'也可推断大致年龄。\n"
-            "3. gender:原文用'她'指代→女,'他'→男;'仙子'→女,'仙人'不限定。必须提取。\n"
-            "4. race:成仙后仍是出身种族(人族成仙仍为人族,不填仙人)。\n"
-            "5. origin:原文提到部落/家族/遭难/被灭/流离,提取为身世(不填'未知')。\n"
-            "【化身区分】目标角色与其化身/复活体(如灰豆豆是另一个人,用不同道果)——"
-            "若片段讲的是化身/复活体,标 field='incarnation' 并注明其名与道果。\n"
-            "【其他重点】成仙(如何成仙/代价)、复活(谁复活/如何复活,如念名字)、"
-            "关系网(含所属群体如上古四仙及成员)、外貌(多条带出处)。\n"
+            "【推断规则】dao_fruit:从'X道果'(任何搭配)提取;age:从'X岁'提取;"
+            "gender:从'她/仙子'推断;race:成仙后仍人族;origin:部落/家族/遭难。\n"
             "无则 facts 空数组。只输出 JSON。"
         )
 

@@ -5,6 +5,7 @@
 首个内置插件:novel(小说)。切换领域 = 装包/改配置,内核不改。
 """
 
+from .annotation import Annotation, build_prompt_from_annotations
 from .base import DomainPlugin
 from .registry import (
     discover_plugins,
@@ -16,6 +17,8 @@ from .registry import (
 
 __all__ = [
     "DomainPlugin",
+    "Annotation",
+    "build_prompt_from_annotations",
     "load_plugin",
     "discover_plugins",
     "load_plugin_config",
