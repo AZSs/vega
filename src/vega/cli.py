@@ -92,6 +92,7 @@ def main(argv: list[str] | None = None) -> int:
     p_serve.add_argument("--host", default="127.0.0.1")
     p_serve.add_argument("--port", type=int, default=8765)
     p_serve.add_argument("--config", default=None, help="vega.toml 插件配置路径")
+    p_serve.add_argument("--spica-path", default=None, help="spica 项目路径(触发写作用)")
 
     args = parser.parse_args(argv)
 
@@ -307,12 +308,15 @@ def _plugins(args: argparse.Namespace) -> int:
 
 
 def _serve(args: argparse.Namespace) -> int:
-    """启动 HTTP 服务(FastAPI),供消费端(如 spica)交互式查询。"""
+    """启动 HTTP 服务(FastAPI + Web UI),供消费端交互式查询 + 浏览器操作。"""
     import uvicorn
 
     from vega.api import create_app
 
-    app = create_app(workdir=args.workdir, config_path=args.config)
+    app = create_app(
+        workdir=args.workdir, config_path=args.config, spica_path=getattr(args, "spica_path", None)
+    )
+    print(f"[vega] Web UI: http://{args.host}:{args.port}")
     uvicorn.run(app, host=args.host, port=args.port)
     return 0
 
