@@ -6,6 +6,7 @@ vaga 和 spica 共用同一套重试策略:
 - 超时: 30s,超时后重试
 - 全部失败: 返降级值(不崩溃,流水线继续)
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -40,15 +41,18 @@ async def with_retry(
         except httpx.HTTPStatusError as e:
             if e.response.status_code in RETRYABLE_STATUS and attempt < max_retries:
                 delay = base_delay * (2**attempt)
-                print(f"[retry] {label} HTTP {e.response.status_code},{delay}s 后重试({attempt+1}/{max_retries})")
+                print(
+                    f"[retry] {label} HTTP {e.response.status_code},"
+                    f"{delay}s 后重试({attempt + 1}/{max_retries})"
+                )
                 await asyncio.sleep(delay)
                 continue
             print(f"[retry] {label} HTTP {e.response.status_code} 不可重试,降级")
             return fallback
-        except (httpx.TimeoutException, asyncio.TimeoutError) as e:
+        except (TimeoutError, httpx.TimeoutException):
             if attempt < max_retries:
                 delay = base_delay * (2**attempt)
-                print(f"[retry] {label} 超时,{delay}s 后重试({attempt+1}/{max_retries})")
+                print(f"[retry] {label} 超时,{delay}s 后重试({attempt + 1}/{max_retries})")
                 await asyncio.sleep(delay)
                 continue
             print(f"[retry] {label} 超时({timeout}s),降级")
@@ -56,7 +60,7 @@ async def with_retry(
         except (httpx.ConnectError, httpx.NetworkError) as e:
             if attempt < max_retries:
                 delay = base_delay * (2**attempt)
-                print(f"[retry] {label} 网络错误,{delay}s 后重试({attempt+1}/{max_retries})")
+                print(f"[retry] {label} 网络错误,{delay}s 后重试({attempt + 1}/{max_retries})")
                 await asyncio.sleep(delay)
                 continue
             print(f"[retry] {label} 网络错误,降级:{e}")

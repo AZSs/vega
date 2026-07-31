@@ -31,25 +31,30 @@ def make_openai_chat(
     base_url: str = "https://api.deepseek.com",
     model: str = "deepseek-chat",
 ) -> ChatFn:
-    """OpenAI 兼容 chat(DeepSeek 等)。base_url/model 可换其他兼容服务。"""
+    """OpenAI 兼容 chat(DeepSeek 等)。带重试+超时+降级(429/网络错误不崩溃)。"""
+    from .retry import with_retry
 
     async def chat(system: str, user: str) -> str:
-        async with httpx.AsyncClient(timeout=120) as client:
-            resp = await client.post(
-                f"{base_url}/chat/completions",
-                headers={"Authorization": f"Bearer {api_key}"},
-                json={
-                    "model": model,
-                    "messages": [
-                        {"role": "system", "content": system},
-                        {"role": "user", "content": user},
-                    ],
-                    "stream": False,
-                    "temperature": 0.2,
-                },
-            )
-            resp.raise_for_status()
-            return str(resp.json()["choices"][0]["message"]["content"])
+        async def _call() -> str:
+            async with httpx.AsyncClient(timeout=120) as client:
+                resp = await client.post(
+                    f"{base_url}/chat/completions",
+                    headers={"Authorization": f"Bearer {api_key}"},
+                    json={
+                        "model": model,
+                        "messages": [
+                            {"role": "system", "content": system},
+                            {"role": "user", "content": user},
+                        ],
+                        "stream": False,
+                        "temperature": 0.2,
+                    },
+                )
+                resp.raise_for_status()
+                return str(resp.json()["choices"][0]["message"]["content"])
+
+        result = await with_retry(_call, fallback="", label=f"openai:{model}")
+        return result if isinstance(result, str) else ""
 
     return chat
 

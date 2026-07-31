@@ -48,40 +48,55 @@ async def embed_segments(segments: list[Segment], *, embed: EmbedFn) -> list[lis
 def make_ollama_embedder(
     base_url: str = "http://localhost:11434", model: str = "bge-m3"
 ) -> EmbedFn:
-    """构造 Ollama embedding 函数(批量:一次请求 embed 多个文本)。失败抛错,调用方降级。"""
+    """构造 Ollama embedding 函数(批量+重试+降级)。失败返空列表(调用方降级跳过)。"""
     import httpx
+
+    from .retry import with_retry
 
     async def embed(texts: list[str]) -> list[list[float]]:
         if not texts:
             return []
-        async with httpx.AsyncClient(timeout=120) as client:
-            resp = await client.post(f"{base_url}/api/embed", json={"model": model, "input": texts})
-            resp.raise_for_status()
-            data = resp.json()
-            return [[float(x) for x in v] for v in data["embeddings"]]
+
+        async def _call() -> list[list[float]]:
+            async with httpx.AsyncClient(timeout=120) as client:
+                resp = await client.post(
+                    f"{base_url}/api/embed", json={"model": model, "input": texts}
+                )
+                resp.raise_for_status()
+                data = resp.json()
+                return [[float(x) for x in v] for v in data["embeddings"]]
+
+        result = await with_retry(_call, fallback=[], label=f"ollama-embed:{model}")
+        return result if isinstance(result, list) else []
 
     return embed
 
 
 def make_ollama_chat(base_url: str = "http://localhost:11434", model: str = "qwen2.5:7b") -> ChatFn:
-    """构造 Ollama chat 函数(用于 contextual prefix,本地小模型即可)。"""
+    """构造 Ollama chat 函数(重试+降级)。"""
     import httpx
 
+    from .retry import with_retry
+
     async def chat(system: str, user: str) -> str:
-        async with httpx.AsyncClient(timeout=60) as client:
-            resp = await client.post(
-                f"{base_url}/api/chat",
-                json={
-                    "model": model,
-                    "messages": [
-                        {"role": "system", "content": system},
-                        {"role": "user", "content": user},
-                    ],
-                    "stream": False,
-                },
-            )
-            resp.raise_for_status()
-            return str(resp.json()["message"]["content"])
+        async def _call() -> str:
+            async with httpx.AsyncClient(timeout=60) as client:
+                resp = await client.post(
+                    f"{base_url}/api/chat",
+                    json={
+                        "model": model,
+                        "messages": [
+                            {"role": "system", "content": system},
+                            {"role": "user", "content": user},
+                        ],
+                        "stream": False,
+                    },
+                )
+                resp.raise_for_status()
+                return str(resp.json()["message"]["content"])
+
+        result = await with_retry(_call, fallback="", label=f"ollama-chat:{model}")
+        return result if isinstance(result, str) else ""
 
     return chat
 
