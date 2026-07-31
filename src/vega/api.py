@@ -67,15 +67,23 @@ def create_app(*, workdir: str, config_path: str | None = None) -> FastAPI:
         aliases: str = "",
         plugin: str = "novel",
     ) -> dict[str, Any]:
-        dim = _dim_of(workdir, doc_id)
-        if dim is None:
-            raise HTTPException(404, f"未找到 {doc_id} 的知识库(先 ingest)")
         try:
             plug = load_plugin(plugin, config_path)
         except ValueError as e:
             raise HTTPException(400, str(e)) from None
         alias_list = [a.strip() for a in aliases.split(",") if a.strip()]
-        result = await synthesize_profile(workdir, doc_id, entity, alias_list, plug)
+
+        # 优先 LightRAG 后端(graphml 存在);回退自建后端(vectors.sqlite)
+        lightrag_graph = Path(workdir) / doc_id / "lightrag" / "graph_chunk_entity_relation.graphml"
+        if lightrag_graph.exists():
+            from .core.profile import build_profile_from_lightrag
+
+            result = await build_profile_from_lightrag(workdir, doc_id, entity, alias_list, plug)
+        else:
+            dim = _dim_of(workdir, doc_id)
+            if dim is None:
+                raise HTTPException(404, f"未找到 {doc_id} 的知识库(先 ingest)")
+            result = await synthesize_profile(workdir, doc_id, entity, alias_list, plug)
         if result is None:
             raise HTTPException(404, "无命中或合成失败")
         return result
