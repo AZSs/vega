@@ -127,10 +127,11 @@ async def _profile(args: argparse.Namespace) -> int:
     名归一:主名+别名并集召回(不朽仙子=黄豆豆)。溯源:每块带 segment_id。
     """
     import json
+    import re
     import sqlite3
     from pathlib import Path
 
-    from vega.core.embed import make_ollama_chat
+    from vega.core.llm import make_chat_from_env
     from vega.store import VectorHit, VectorStore
 
     db_path = Path(args.workdir) / args.doc_id / "vectors.sqlite"
@@ -165,43 +166,94 @@ async def _profile(args: argparse.Namespace) -> int:
         print("[vega] 无命中,无法合成画像")
         return 0
 
-    # 抽样:跨全书均匀取 N 块(防 LLM 上下文超限)
-    n = 30
-    if len(mentions) > n:
-        step = len(mentions) / n
-        sample = [mentions[int(i * step)] for i in range(n)]
-    else:
-        sample = mentions
-    passages = "\n\n---\n".join(f"[段{h.segment_id}] {h.text}" for h in sample)
+    # 定向召回:含出身/成仙关键词的块优先(部落/道果/寂灭/成仙/岁...),否则均匀抽样会漏关键事实
+    focus_kws = ["部落", "道果", "寂灭", "成仙", "十六岁", "岁", "族人", "灭族", "废"]
+    focus_ids: set[int] = set()
+    focus: list[VectorHit] = []
+    for h in mentions:
+        if any(k in h.text for k in focus_kws):
+            focus.append(h)
+            focus_ids.add(id(h))
+    print(f"[vega] 定向命中(出身/成仙关键词){len(focus)} 块")
 
+    # 样本:定向块优先,超量则均匀裁剪;不足则用其余块补齐到 n_target
+    n_target = 80
+    rest = [h for h in mentions if id(h) not in focus_ids]
+    if len(focus) >= n_target:
+        step = len(focus) / n_target
+        sample = [focus[int(i * step)] for i in range(n_target)]
+    else:
+        n_fill = n_target - len(focus)
+        if len(rest) > n_fill:
+            rstep = len(rest) / n_fill
+            fill = [rest[int(i * rstep)] for i in range(n_fill)]
+        else:
+            fill = rest
+        sample = focus + fill
+    sample.sort(key=lambda h: h.segment_id)
+    print(f"[vega] 样本 {len(sample)} 块(定向 {len(focus)} 优先)")
     alias_note = f"(别名:{'、'.join(aliases)})" if aliases else ""
-    system = (
-        "你是小说人物画像合成器。根据给定的小说片段,为指定角色合成结构化人物画像。"
-        "只输出 JSON,不要额外文字。每个事实尽量标注来源段号 [段N]。不确定的字段填 null,不要编造。"
+    chat_fn = make_chat_from_env()
+
+    # 两遍合成(防一锅烩搞混主角):
+    # pass1 逐片段只抽关于目标角色的事实(滤掉其他角色) → pass2 聚合成画像
+    extract_sys = (
+        "你从小说片段中提取【只关于指定角色】的事实。"
+        "片段里会出现其他角色,只提取明确关于目标角色的事实,他人的忽略。"
+        "重点关注:出身种族(人族/妖族等,区别于当前境界)、身世(部落/家族/遭遇,如部落被灭)、"
+        "年龄、道果(道果名及状态,如 寂灭道果 被废)、修为境界、成仙相关(如何成仙/成仙前代价/复活)、"
+        "化身或复活形态(如复活后使用某道果的另一个自我)、"
+        "关系网(含所属群体如同辈仙人组合/上古四仙,及个体关系如师徒/恋人/好友)。"
+        "无则 facts 空数组。只输出 JSON。"
     )
-    user = (
-        f"角色:{args.entity}{alias_note}\n\n片段:\n{passages}\n\n"
+    all_facts: list[dict[str, object]] = []
+    for h in sample:
+        extract_user = (
+            f"目标角色:{args.entity}{alias_note}\n片段:[段{h.segment_id}] {h.text}\n"
+            '输出 {"facts":[{"field":"race|origin|age|dao_fruit|gender|appearance|'
+            'personality|cultivation|technique|artifact|relation|immortalization|event",'
+            '"value":"...","seg":N}]}'
+        )
+        try:
+            raw = await chat_fn(extract_sys, extract_user)
+            m = re.search(r"\{[\s\S]*\}", raw)
+            if m:
+                facts = json.loads(m.group(0)).get("facts", [])
+                for f in facts:
+                    all_facts.append(f)
+        except Exception:
+            continue
+    print(f"[vega] pass1 抽取事实 {len(all_facts)} 条,pass2 聚合合成画像...")
+
+    facts_block = json.dumps(all_facts, ensure_ascii=False, indent=1)[:8000]
+    merge_sys = (
+        "你是小说人物画像合成器。根据给定的事实列表(每条带来源段号 seg),"
+        "为指定角色合成结构化人物画像。只依据事实,不确定填 null,不要编造。只输出 JSON。"
+    )
+    merge_user = (
+        f"角色:{args.entity}{alias_note}\n\n事实列表:\n{facts_block}\n\n"
         "输出 JSON 格式:\n"
-        '{"name":"...","race":"种族","origin":"身世出身","gender":"性别",'
-        '"appearance":"外貌","personality":"性格",'
+        '{"name":"...","race":"出身种族(人族/妖族等,非当前境界)",'
+        '"origin":"身世出身(部落/家族/遭遇,如部落被灭)",'
+        '"age":"年龄","dao_fruit":"道果及状态(如寂灭道果,成仙前被废)",'
+        '"gender":"性别","appearance":"外貌","personality":"性格",'
         '"cultivation_stages":[{"stage":"境界","from_seg":N}],'
         '"techniques":["功法"],"artifacts":["法宝/持有物"],'
         '"relations":[{"target":"角色","type":"关系"}],'
         '"key_events":[{"seg":N,"desc":"事件"}],'
-        '"immortalization_path":"成仙路径(如何成为不朽仙子)"}'
+        '"immortalization_path":"成仙路径(如何成仙,代价是什么)"}'
     )
-    chat_fn = make_ollama_chat(base_url=args.ollama_url, model=args.chat_model)
-    raw = await chat_fn(system, user)
-    # 尝试抽 JSON 块美化打印
-    import re
-
+    raw = await chat_fn(merge_sys, merge_user)
     m = re.search(r"\{[\s\S]*\}", raw)
     if m:
         try:
             parsed = json.loads(m.group(0))
             print("\n=== 人物画像 ===")
             print(json.dumps(parsed, ensure_ascii=False, indent=2))
-            print(f"\n(基于 {len(sample)} 个抽样片段,全文命中 {len(mentions)} 块)")
+            print(
+                f"\n(基于 {len(sample)} 个抽样片段 / pass1 {len(all_facts)} 条事实,"
+                f"全文命中 {len(mentions)} 块)"
+            )
             return 0
         except json.JSONDecodeError:
             pass
