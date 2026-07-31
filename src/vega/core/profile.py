@@ -245,7 +245,7 @@ async def build_profile_from_lightrag(
     all_facts: list[dict[str, object]] = []
     for chunk_key, text in all_chunks.items():
         extract_user = (
-            f"目标角色:{entity}{alias_note}\n片段:[{chunk_key}] {text[:1500]}\n"
+            f"目标角色:{entity}{alias_note}\n片段:[{chunk_key}] {text[:3000]}\n"
             f'输出 {{"facts":[{{"field":"{fields}","value":"...","seg":"{chunk_key}"}}]}}'
         )
         try:
