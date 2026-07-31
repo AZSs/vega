@@ -144,7 +144,8 @@ class LightRAGEngine:
         if node_data is None:
             return None
         source_id = node_data.get("source_id", "")
-        chunk_keys = [k for k in str(source_id).split() if k] if source_id else []
+        # LightRAG source_id 用 <SEP> 分隔多个 chunk_key
+        chunk_keys = [k for k in str(source_id).split("<SEP>") if k] if source_id else []
         chunks: list[str] = []
         for key in chunk_keys:
             try:

@@ -198,4 +198,86 @@ def build_profile_from_kg(
     }
 
 
-__all__ = ["synthesize_profile", "build_profile_from_kg"]
+async def build_profile_from_lightrag(
+    workdir: str,
+    doc_id: str,
+    entity: str,
+    aliases: list[str],
+    plugin: DomainPlugin,
+    chat_fn: ChatFn | None = None,
+) -> dict[str, Any] | None:
+    """从 LightRAG 底座聚合结构化画像(两层抽取)。
+
+    第一层 LightRAG:自主发现实体 + source chunks(不靠用户种子)。
+    第二层 vega:对 source chunks 跑结构化 extract_prompt(race/dao_fruit/origin),
+    带 chunk_key 溯源 → 聚合成结构化画像。
+    """
+    from .embed import make_ollama_embedder
+    from .lightrag_engine import LightRAGEngine
+
+    chat = chat_fn or make_chat_from_env()
+    engine = LightRAGEngine(workdir, doc_id, plugin, chat=chat, embed=make_ollama_embedder())
+
+    # 收集实体(含别名)的 source chunks(LightRAG 自主发现 + 溯源)
+    all_chunks: dict[str, str] = {}  # chunk_key -> text(去重)
+    merged_names: list[str] = []
+    for name in [entity, *aliases]:
+        result = await engine.get_entity_with_sources(name)
+        if result:
+            merged_names.append(name)
+            for key, text in zip(
+                result.get("source_chunk_keys", []), result.get("source_chunks", []), strict=False
+            ):
+                if key not in all_chunks and text.strip():
+                    all_chunks[key] = text
+
+    if not all_chunks:
+        return None
+    print(f"[vega-lightrag] {entity} 收集到 {len(all_chunks)} 个 source chunks(LightRAG 溯源)")
+
+    # pass1:逐 chunk 抽目标实体结构化事实(race/dao_fruit/origin,带 chunk_key 溯源)
+    extract_sys = plugin.profile_extract_system()
+    fields = plugin.profile_fields()
+    alias_note = f"(别名:{'、'.join(aliases)})" if aliases else ""
+    all_facts: list[dict[str, object]] = []
+    for chunk_key, text in all_chunks.items():
+        extract_user = (
+            f"目标角色:{entity}{alias_note}\n片段:[{chunk_key}] {text[:1500]}\n"
+            f'输出 {{"facts":[{{"field":"{fields}","value":"...","seg":"{chunk_key}"}}]}}'
+        )
+        try:
+            raw = await chat(extract_sys, extract_user)
+            m = re.search(r"\{[\s\S]*\}", raw)
+            if m:
+                for f in json.loads(m.group(0)).get("facts", []):
+                    all_facts.append(f)
+        except Exception:
+            continue
+
+    print(f"[vega-lightrag] pass1 抽取 {len(all_facts)} 条事实,pass2 聚合...")
+
+    # pass2:聚合事实 → 结构化画像
+    facts_block = json.dumps(all_facts, ensure_ascii=False, indent=1)[:8000]
+    merge_sys = (
+        "你是实体画像合成器。根据给定的事实列表(每条带来源 chunk_key),"
+        "为指定实体合成结构化画像。只依据事实,不确定填 null,不要编造。只输出 JSON。"
+    )
+    merge_user = (
+        f"实体:{entity}{alias_note}\n\n事实列表:\n{facts_block}\n\n"
+        f"输出 JSON 格式(只依据事实,不确定填 null,不要编造):\n{plugin.profile_schema()}"
+    )
+    raw = await chat(merge_sys, merge_user)
+    m = re.search(r"\{[\s\S]*\}", raw)
+    if m:
+        try:
+            result = dict[str, Any](json.loads(m.group(0)))
+            result["_merged_names"] = merged_names
+            result["_source_chunks"] = len(all_chunks)
+            result["_facts"] = len(all_facts)
+            return result
+        except json.JSONDecodeError:
+            pass
+    return {"_raw": raw, "_merged_names": merged_names}
+
+
+__all__ = ["synthesize_profile", "build_profile_from_kg", "build_profile_from_lightrag"]

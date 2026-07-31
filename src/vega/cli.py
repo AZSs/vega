@@ -49,6 +49,12 @@ def main(argv: list[str] | None = None) -> int:
     p_profile.add_argument(
         "--kg", action="store_true", help="从 KG 聚合画像(全量+溯源,需先 extract)"
     )
+    p_profile.add_argument(
+        "--backend",
+        choices=["self", "lightrag"],
+        default="self",
+        help="底座:lightrag=LightRAG 自主发现+结构化画像",
+    )
 
     p_query = sub.add_parser("query", help="语义检索:返回 top-k 相关片段")
     p_query.add_argument("doc_id")
@@ -186,15 +192,30 @@ async def _query(args: argparse.Namespace) -> int:
 
 
 async def _profile(args: argparse.Namespace) -> int:
-    """合成实体画像。--kg:从 KG 聚合(全量+溯源);否则快速两遍合成(抽样+LLM)。"""
+    """合成实体画像。--backend lightrag:LightRAG 自主发现+结构化画像;--kg:自建 KG 聚合。"""
     import json
 
-    from vega.core.profile import build_profile_from_kg, synthesize_profile
     from vega.plugins import load_plugin
 
     aliases = [a.strip() for a in args.aliases.split(",") if a.strip()]
     plugin = load_plugin(args.plugin, getattr(args, "config", None))
+
+    if args.backend == "lightrag":
+        from vega.core.profile import build_profile_from_lightrag
+
+        result = await build_profile_from_lightrag(
+            args.workdir, args.doc_id, args.entity, aliases, plugin
+        )
+        if result is None:
+            print(f"[vega] LightRAG 中未找到 {args.entity}(先 vega ingest --backend lightrag?)")
+            return 1
+        print("\n=== 人物画像(LightRAG 自主发现 + 结构化溯源) ===")
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0
+
     if args.kg:
+        from vega.core.profile import build_profile_from_kg
+
         result = build_profile_from_kg(args.workdir, args.doc_id, args.entity, aliases, plugin)
         if result is None:
             print(f"[vega] KG 中未找到 {args.entity}(先 vega extract?)")
@@ -207,6 +228,8 @@ async def _profile(args: argparse.Namespace) -> int:
     if not db_path.exists():
         print(f"[vega] 未找到 {args.doc_id} 的知识库(先 ingest)", file=sys.stderr)
         return 1
+    from vega.core.profile import synthesize_profile
+
     result = await synthesize_profile(args.workdir, args.doc_id, args.entity, aliases, plugin)
     if result is None:
         print("[vega] 无命中或向量表缺失,无法合成画像")

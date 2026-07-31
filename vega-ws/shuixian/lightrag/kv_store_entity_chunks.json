@@ -1,0 +1,7063 @@
+{
+  "蛮骨": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013"
+    ],
+    "count": 11,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "蛮骨"
+  },
+  "河灵": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "河灵"
+  },
+  "陆阳": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 37,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "陆阳"
+  },
+  "孟景舟": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 18,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "孟景舟"
+  },
+  "戴不凡": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 12,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "戴不凡"
+  },
+  "云芝": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 20,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "云芝"
+  },
+  "破旧斧头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "破旧斧头"
+  },
+  "灵器开山斧": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "灵器开山斧"
+  },
+  "仙器开天斧": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "仙器开天斧"
+  },
+  "第二关": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "第二关"
+  },
+  "幻境": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "幻境"
+  },
+  "李慕白": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "李慕白"
+  },
+  "俞秀莲": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "俞秀莲"
+  },
+  "玉娇龙": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "玉娇龙"
+  },
+  "罗小虎": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "罗小虎"
+  },
+  "碧眼狐狸": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "碧眼狐狸"
+  },
+  "青冥剑": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "青冥剑"
+  },
+  "武当山": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "武当山"
+  },
+  "江湖": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-006",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "江湖"
+  },
+  "问道宗": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 28,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "问道宗"
+  },
+  "任务大殿": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "任务大殿"
+  },
+  "五大仙门": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 6,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "五大仙门"
+  },
+  "妖域见闻": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "妖域见闻"
+  },
+  "青锋剑": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "青锋剑"
+  },
+  "豆腐": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "豆腐"
+  },
+  "傀儡": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "傀儡"
+  },
+  "鹦鹉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "鹦鹉"
+  },
+  "剑意": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "剑意"
+  },
+  "举轻若重": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "举轻若重"
+  },
+  "天启": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "天启"
+  },
+  "神族": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "神族"
+  },
+  "人族": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "人族"
+  },
+  "天启大陆": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "天启大陆"
+  },
+  "力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-025"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "力量"
+  },
+  "桃夭叶": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 12,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "桃夭叶"
+  },
+  "藏经阁": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 7,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "藏经阁"
+  },
+  "泗水洞天": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "泗水洞天"
+  },
+  "混沌破晓诀": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "混沌破晓诀"
+  },
+  "天门峰": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "天门峰"
+  },
+  "曲河郡太平乡": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "曲河郡太平乡"
+  },
+  "鸟类妖兽": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "鸟类妖兽"
+  },
+  "宗主": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "宗主"
+  },
+  "八大长老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "八大长老"
+  },
+  "阿兹卡班": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014"
+    ],
+    "count": 7,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿兹卡班"
+  },
+  "摄魂怪": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014"
+    ],
+    "count": 6,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "摄魂怪"
+  },
+  "小天狼星布莱克": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "小天狼星布莱克"
+  },
+  "哈利·波特": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "哈利·波特"
+  },
+  "伏地魔": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "伏地魔"
+  },
+  "霍格沃茨魔法学校": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "霍格沃茨魔法学校"
+  },
+  "邓布利多": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "邓布利多"
+  },
+  "魔法部": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法部"
+  },
+  "预言": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "预言"
+  },
+  "凤凰社": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-028",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "凤凰社"
+  },
+  "开天斧": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "开天斧"
+  },
+  "开山斧": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "开山斧"
+  },
+  "第二关考验": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "第二关考验"
+  },
+  "第三道考验": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "第三道考验"
+  },
+  "李四": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "李四"
+  },
+  "王五": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-007",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "王五"
+  },
+  "周露露": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "周露露"
+  },
+  "吴明": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "吴明"
+  },
+  "丹鼎峰": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "丹鼎峰"
+  },
+  "厨师": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "厨师"
+  },
+  "炼器师": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 2,
+    "update_time": 1785471570,
+    "_id": "炼器师"
+  },
+  "辟谷丹": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "辟谷丹"
+  },
+  "炼丹房": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "炼丹房"
+  },
+  "李青": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "李青"
+  },
+  "张伟": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-017",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "张伟"
+  },
+  "曲河郡": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "曲河郡"
+  },
+  "飞舟": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "飞舟"
+  },
+  "剑修": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "剑修"
+  },
+  "道法修士": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "道法修士"
+  },
+  "上古先民": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "上古先民"
+  },
+  "大妖": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大妖"
+  },
+  "平衡阵法": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "平衡阵法"
+  },
+  "问心山": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "问心山"
+  },
+  "上古蛮族": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "上古蛮族"
+  },
+  "斧头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "斧头"
+  },
+  "长老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "长老"
+  },
+  "张三": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-008",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "张三"
+  },
+  "孟家": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "孟家"
+  },
+  "灵根": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "灵根"
+  },
+  "修仙境界": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "修仙境界"
+  },
+  "异宝马车": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "异宝马车"
+  },
+  "金色铃铛": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "金色铃铛"
+  },
+  "问道宗测试": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "问道宗测试"
+  },
+  "哈利波特": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-001",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "哈利波特"
+  },
+  "小白鼠": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "小白鼠"
+  },
+  "丹鼎峰七长老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "丹鼎峰七长老"
+  },
+  "李浩然": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "李浩然"
+  },
+  "三长老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "三长老"
+  },
+  "四长老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "四长老"
+  },
+  "五长老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "五长老"
+  },
+  "六长老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "六长老"
+  },
+  "言传峰": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "言传峰"
+  },
+  "洞府": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "洞府"
+  },
+  "阿列克谢": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿列克谢"
+  },
+  "伊万": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "伊万"
+  },
+  "莫斯科": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "莫斯科"
+  },
+  "西伯利亚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "西伯利亚"
+  },
+  "沙皇": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "沙皇"
+  },
+  "革命": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "革命"
+  },
+  "陆地剑仙": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "陆地剑仙"
+  },
+  "大夏王朝帝城": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大夏王朝帝城"
+  },
+  "太平乡": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036"
+    ],
+    "count": 6,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "太平乡"
+  },
+  "青云城": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "青云城"
+  },
+  "通天谷": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "通天谷"
+  },
+  "伏龙山": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "伏龙山"
+  },
+  "大师姐": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大师姐"
+  },
+  "剑灵根": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-030",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "剑灵根"
+  },
+  "静心口诀": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "静心口诀"
+  },
+  "孟家匕首": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "孟家匕首"
+  },
+  "7字形梯子": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "7字形梯子"
+  },
+  "林克": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "林克"
+  },
+  "塞尔达公主": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "塞尔达公主"
+  },
+  "灾厄盖侬": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "灾厄盖侬"
+  },
+  "海拉鲁王国": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "海拉鲁王国"
+  },
+  "大师之剑": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大师之剑"
+  },
+  "希卡族": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "希卡族"
+  },
+  "封印之力": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-009",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "封印之力"
+  },
+  "云芝姑娘": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "云芝姑娘"
+  },
+  "第三关": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "第三关"
+  },
+  "第一关": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "第一关"
+  },
+  "护宗大阵": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "护宗大阵"
+  },
+  "门户山岳": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "门户山岳"
+  },
+  "核心弟子": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "核心弟子"
+  },
+  "老马": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "老马"
+  },
+  "白莲": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "白莲"
+  },
+  "罗辑": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "罗辑"
+  },
+  "三体文明": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "三体文明"
+  },
+  "黑暗森林威慑": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑暗森林威慑"
+  },
+  "执剑人": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015"
+    ],
+    "count": 5,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "执剑人"
+  },
+  "威慑纪元": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "威慑纪元"
+  },
+  "程心": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "程心"
+  },
+  "威慑失败": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "威慑失败"
+  },
+  "地球文明": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "地球文明"
+  },
+  "广播坐标": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "广播坐标"
+  },
+  "老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "老"
+  },
+  "六长老陆阳": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "六长老陆阳"
+  },
+  "先天道人": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "先天道人"
+  },
+  "归元天尊": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "归元天尊"
+  },
+  "瀚海道君": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "瀚海道君"
+  },
+  "先天殿": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "先天殿"
+  },
+  "火灵根": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "火灵根"
+  },
+  "仙体": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "仙体"
+  },
+  "二师兄": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "二师兄"
+  },
+  "三师姐": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "三师姐"
+  },
+  "魂器": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魂器"
+  },
+  "死亡圣器": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "死亡圣器"
+  },
+  "老魔杖": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "老魔杖"
+  },
+  "复活石": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "复活石"
+  },
+  "隐形衣": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "隐形衣"
+  },
+  "赫敏格兰杰": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赫敏格兰杰"
+  },
+  "罗恩韦斯莱": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "罗恩韦斯莱"
+  },
+  "斯内普": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "斯内普"
+  },
+  "麦格教授": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "麦格教授"
+  },
+  "海格": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "海格"
+  },
+  "卢修斯马尔福": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卢修斯马尔福"
+  },
+  "纳西莎马尔福": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "纳西莎马尔福"
+  },
+  "德拉科马尔福": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "德拉科马尔福"
+  },
+  "食死徒": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "食死徒"
+  },
+  "魔法石": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法石"
+  },
+  "密室": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "密室"
+  },
+  "蛇怪": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "蛇怪"
+  },
+  "火焰杯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "火焰杯"
+  },
+  "三强争霸赛": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "三强争霸赛"
+  },
+  "魁地奇": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魁地奇"
+  },
+  "金色飞贼": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "金色飞贼"
+  },
+  "魔杖": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔杖"
+  },
+  "猫头鹰": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "猫头鹰"
+  },
+  "霍格沃茨特快列车": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "霍格沃茨特快列车"
+  },
+  "对角巷": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "对角巷"
+  },
+  "古灵阁": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "古灵阁"
+  },
+  "妖精": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "妖精"
+  },
+  "预言家日报": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "预言家日报"
+  },
+  "魔法石制造者": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法石制造者"
+  },
+  "尼可勒梅": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "尼可勒梅"
+  },
+  "阿不思邓布利多": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿不思邓布利多"
+  },
+  "西弗勒斯斯内普": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "西弗勒斯斯内普"
+  },
+  "米勒娃麦格": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "米勒娃麦格"
+  },
+  "鲁伯海格": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "鲁伯海格"
+  },
+  "汤姆里德尔": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "汤姆里德尔"
+  },
+  "詹姆波特": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "詹姆波特"
+  },
+  "莉莉波特": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "莉莉波特"
+  },
+  "彼得佩迪鲁": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "彼得佩迪鲁"
+  },
+  "虫尾巴": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "虫尾巴"
+  },
+  "疯眼汉穆迪": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "疯眼汉穆迪"
+  },
+  "阿拉斯托穆迪": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿拉斯托穆迪"
+  },
+  "唐克斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "唐克斯"
+  },
+  "卢平": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卢平"
+  },
+  "莱姆斯卢平": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "莱姆斯卢平"
+  },
+  "金妮韦斯莱": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "金妮韦斯莱"
+  },
+  "韦斯莱家族": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "韦斯莱家族"
+  },
+  "莫丽韦斯莱": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "莫丽韦斯莱"
+  },
+  "亚瑟韦斯莱": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "亚瑟韦斯莱"
+  },
+  "比尔韦斯莱": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "比尔韦斯莱"
+  },
+  "查理韦斯莱": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "查理韦斯莱"
+  },
+  "珀西韦斯莱": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "珀西韦斯莱"
+  },
+  "弗雷德韦斯莱": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "弗雷德韦斯莱"
+  },
+  "乔治韦斯莱": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "乔治韦斯莱"
+  },
+  "纳威隆巴顿": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "纳威隆巴顿"
+  },
+  "卢娜洛夫古德": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卢娜洛夫古德"
+  },
+  "秋张": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "秋张"
+  },
+  "塞德里克迪戈里": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "塞德里克迪戈里"
+  },
+  "芙蓉德拉库尔": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "芙蓉德拉库尔"
+  },
+  "维克多克鲁姆": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "维克多克鲁姆"
+  },
+  "巴蒂克劳奇": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "巴蒂克劳奇"
+  },
+  "小巴蒂克劳奇": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "小巴蒂克劳奇"
+  },
+  "多比": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "多比"
+  },
+  "克利切": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "克利切"
+  },
+  "家养小精灵": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "家养小精灵"
+  },
+  "魔法生物": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法生物"
+  },
+  "龙": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙"
+  },
+  "匈牙利树蜂": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "匈牙利树蜂"
+  },
+  "挪威脊背龙": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "挪威脊背龙"
+  },
+  "诺伯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "诺伯"
+  },
+  "独角兽": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "独角兽"
+  },
+  "人马": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "人马"
+  },
+  "费伦泽": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "费伦泽"
+  },
+  "占卜学": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "占卜学"
+  },
+  "特里劳妮": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "特里劳妮"
+  },
+  "西比尔特里劳妮": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "西比尔特里劳妮"
+  },
+  "预言球": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "预言球"
+  },
+  "神秘事务司": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "神秘事务司"
+  },
+  "时间转换器": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "时间转换器"
+  },
+  "活点地图": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "活点地图"
+  },
+  "劫盗者": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "劫盗者"
+  },
+  "尖叫棚屋": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "尖叫棚屋"
+  },
+  "霍格莫德": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "霍格莫德"
+  },
+  "三把扫帚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "三把扫帚"
+  },
+  "猪头酒吧": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "猪头酒吧"
+  },
+  "蜂蜜公爵": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "蜂蜜公爵"
+  },
+  "佐科笑话店": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "佐科笑话店"
+  },
+  "风雅牌巫师服装店": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "风雅牌巫师服装店"
+  },
+  "奥利凡德魔杖店": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "奥利凡德魔杖店"
+  },
+  "丽痕书店": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "丽痕书店"
+  },
+  "破釜酒吧": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "破釜酒吧"
+  },
+  "翻倒巷": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "翻倒巷"
+  },
+  "博金博克商店": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "博金博克商店"
+  },
+  "魔法部总部": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法部总部"
+  },
+  "威森加摩": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "威森加摩"
+  },
+  "傲罗": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "傲罗"
+  },
+  "魔法法律执行司": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法法律执行司"
+  },
+  "魔法事故和灾害司": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法事故和灾害司"
+  },
+  "魔法交通司": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法交通司"
+  },
+  "魔法体育运动司": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法体育运动司"
+  },
+  "魔法生物管理控制司": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法生物管理控制司"
+  },
+  "国际魔法合作司": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "国际魔法合作司"
+  },
+  "唱唱反调": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "唱唱反调"
+  },
+  "谢诺菲留斯洛夫古德": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "谢诺菲留斯洛夫古德"
+  },
+  "厄里斯魔镜": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "厄里斯魔镜"
+  },
+  "黑衣中年": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑衣中年"
+  },
+  "落地金钱商会": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "落地金钱商会"
+  },
+  "制式纸伞": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "制式纸伞"
+  },
+  "红纸伞": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "红纸伞"
+  },
+  "降落伞": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "降落伞"
+  },
+  "盗王": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "盗王"
+  },
+  "中央大陆": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 6,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "中央大陆"
+  },
+  "盗贼之祖": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "盗贼之祖"
+  },
+  "修仙大能": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "修仙大能"
+  },
+  "榫卯结构": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "榫卯结构"
+  },
+  "梯子": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "梯子"
+  },
+  "第五十阶": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "第五十阶"
+  },
+  "求道之心考验": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "求道之心考验"
+  },
+  "古代希卡科技": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-010"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "古代希卡科技"
+  },
+  "根骨石": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "根骨石"
+  },
+  "悬空庙": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "悬空庙"
+  },
+  "小和尚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "小和尚"
+  },
+  "大和尚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大和尚"
+  },
+  "艾尔登法环": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾尔登法环"
+  },
+  "褪色者": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "褪色者"
+  },
+  "交界地": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "交界地"
+  },
+  "黄金树": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树"
+  },
+  "玛丽卡女王": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "玛丽卡女王"
+  },
+  "拉达冈": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "拉达冈"
+  },
+  "半神": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "半神"
+  },
+  "大卢恩": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大卢恩"
+  },
+  "黄金律法": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法"
+  },
+  "赐福": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赐福"
+  },
+  "圆桌厅堂": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "圆桌厅堂"
+  },
+  "梅琳娜": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "梅琳娜"
+  },
+  "菈妮": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "菈妮"
+  },
+  "葛弗雷": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "葛弗雷"
+  },
+  "蒙葛特": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "蒙葛特"
+  },
+  "拉塔恩": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "拉塔恩"
+  },
+  "玛莲妮亚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "玛莲妮亚"
+  },
+  "猩红腐败": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "猩红腐败"
+  },
+  "王城罗德尔": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "王城罗德尔"
+  },
+  "史东薇尔城": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "史东薇尔城"
+  },
+  "接肢葛瑞克": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "接肢葛瑞克"
+  },
+  "卡利亚城寨": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卡利亚城寨"
+  },
+  "利耶尼亚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "利耶尼亚"
+  },
+  "魔法学院雷亚卢卡利亚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法学院雷亚卢卡利亚"
+  },
+  "满月女王蕾娜菈": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "满月女王蕾娜菈"
+  },
+  "盖利德": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "盖利德"
+  },
+  "腐败湖": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "腐败湖"
+  },
+  "黄金树守卫": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树守卫"
+  },
+  "大树守卫": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大树守卫"
+  },
+  "古龙": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "古龙"
+  },
+  "黑刀": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑刀"
+  },
+  "黑刀之夜": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑刀之夜"
+  },
+  "死诞者": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "死诞者"
+  },
+  "黄金树恩惠": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树恩惠"
+  },
+  "艾尔登之王": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾尔登之王"
+  },
+  "赐福王蒙葛特": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赐福王蒙葛特"
+  },
+  "碎星拉塔恩": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "碎星拉塔恩"
+  },
+  "米凯拉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "米凯拉"
+  },
+  "圣树": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "圣树"
+  },
+  "腐败女神": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "腐败女神"
+  },
+  "黄金树之根": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树之根"
+  },
+  "深根底层": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "深根底层"
+  },
+  "永恒之城": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "永恒之城"
+  },
+  "诺克隆恩": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "诺克隆恩"
+  },
+  "诺克史黛拉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "诺克史黛拉"
+  },
+  "安瑟尔河": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "安瑟尔河"
+  },
+  "希芙拉河": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "希芙拉河"
+  },
+  "祖灵": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "祖灵"
+  },
+  "双指": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "双指"
+  },
+  "三指": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "三指"
+  },
+  "癫火": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "癫火"
+  },
+  "癫火之王": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "癫火之王"
+  },
+  "黄金律法结局": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法结局"
+  },
+  "群星结局": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "群星结局"
+  },
+  "癫火结局": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "癫火结局"
+  },
+  "艾尔登法环碎片": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾尔登法环碎片"
+  },
+  "黄金树种子": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树种子"
+  },
+  "圣杯瓶": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "圣杯瓶"
+  },
+  "卢恩": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卢恩"
+  },
+  "锻造石": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "锻造石"
+  },
+  "失色锻造石": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "失色锻造石"
+  },
+  "战灰": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "战灰"
+  },
+  "骨灰": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "骨灰"
+  },
+  "灵马": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "灵马"
+  },
+  "托雷特": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "托雷特"
+  },
+  "赐福点": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赐福点"
+  },
+  "玛丽卡雕像": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "玛丽卡雕像"
+  },
+  "黄金树大教堂": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树大教堂"
+  },
+  "艾尔登宝座": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾尔登宝座"
+  },
+  "黄金树守卫战": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树守卫战"
+  },
+  "黑刀刺客": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑刀刺客"
+  },
+  "死之卢恩": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "死之卢恩"
+  },
+  "黄金律法基本主义": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法基本主义"
+  },
+  "卡利亚王室": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卡利亚王室"
+  },
+  "满月": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "满月"
+  },
+  "暗月": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "暗月"
+  },
+  "群星": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "群星"
+  },
+  "黄金树之影": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树之影"
+  },
+  "米凯拉的圣树": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "米凯拉的圣树"
+  },
+  "腐败教堂": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "腐败教堂"
+  },
+  "龙飨教堂": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙飨教堂"
+  },
+  "龙飨": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙飨"
+  },
+  "龙心": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙心"
+  },
+  "龙飨战士": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙飨战士"
+  },
+  "黄金树骑士": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树骑士"
+  },
+  "黑骑士": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑骑士"
+  },
+  "死灵法师": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "死灵法师"
+  },
+  "死诞者之王": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "死诞者之王"
+  },
+  "黄金树之根守护者": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树之根守护者"
+  },
+  "祖灵之王": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "祖灵之王"
+  },
+  "黑暗弃子": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑暗弃子"
+  },
+  "艾斯提": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾斯提"
+  },
+  "诺克史黛拉龙人士兵": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "诺克史黛拉龙人士兵"
+  },
+  "永恒之城居民": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "永恒之城居民"
+  },
+  "地下商人": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "地下商人"
+  },
+  "流浪商人": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "流浪商人"
+  },
+  "铁匠": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "铁匠"
+  },
+  "修女": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "修女"
+  },
+  "神父": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "神父"
+  },
+  "黄金律法祭司": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法祭司"
+  },
+  "魔法师": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔法师"
+  },
+  "战士": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "战士"
+  },
+  "刺客": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "刺客"
+  },
+  "骑士": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "骑士"
+  },
+  "巨人": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "巨人"
+  },
+  "火焰巨人": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "火焰巨人"
+  },
+  "火焰": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "火焰"
+  },
+  "火焰大锅": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "火焰大锅"
+  },
+  "巨人山顶": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "巨人山顶"
+  },
+  "雪原": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "雪原"
+  },
+  "化圣雪原": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "化圣雪原"
+  },
+  "圣树区域": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "圣树区域"
+  },
+  "腐败湖区域": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "腐败湖区域"
+  },
+  "地下区域": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "地下区域"
+  },
+  "天空之城": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "天空之城"
+  },
+  "法姆·亚兹拉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "法姆·亚兹拉"
+  },
+  "古龙之王": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "古龙之王"
+  },
+  "龙王普拉顿桑克斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙王普拉顿桑克斯"
+  },
+  "龙族": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙族"
+  },
+  "黄金树时代": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树时代"
+  },
+  "破碎时代": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "破碎时代"
+  },
+  "修复时代": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "修复时代"
+  },
+  "群星时代": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "群星时代"
+  },
+  "癫火时代": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "癫火时代"
+  },
+  "黄金树之影时代": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树之影时代"
+  },
+  "艾尔登法环的破碎": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾尔登法环的破碎"
+  },
+  "黑刀之夜事件": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑刀之夜事件"
+  },
+  "黄金律法的崩溃": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法的崩溃"
+  },
+  "褪色者的使命": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "褪色者的使命"
+  },
+  "半神之战": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "半神之战"
+  },
+  "破碎战争": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "破碎战争"
+  },
+  "龙飨仪式": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙飨仪式"
+  },
+  "猩红腐败的蔓延": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "猩红腐败的蔓延"
+  },
+  "米凯拉的圣树计划": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "米凯拉的圣树计划"
+  },
+  "菈妮的群星计划": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "菈妮的群星计划"
+  },
+  "癫火的毁灭": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "癫火的毁灭"
+  },
+  "黄金律法的修复": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法的修复"
+  },
+  "艾尔登法环的修复": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾尔登法环的修复"
+  },
+  "黄金树的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树的力量"
+  },
+  "大卢恩的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大卢恩的力量"
+  },
+  "猩红腐败的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "猩红腐败的力量"
+  },
+  "重力魔法": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "重力魔法"
+  },
+  "圣属性力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "圣属性力量"
+  },
+  "暗月魔法": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "暗月魔法"
+  },
+  "满月魔法": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "满月魔法"
+  },
+  "火焰魔法": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "火焰魔法"
+  },
+  "雷电力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "雷电力量"
+  },
+  "龙飨力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙飨力量"
+  },
+  "死灵力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "死灵力量"
+  },
+  "黄金律法魔法": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法魔法"
+  },
+  "黑刀力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑刀力量"
+  },
+  "癫火力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "癫火力量"
+  },
+  "群星力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "群星力量"
+  },
+  "黄金树恩惠的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树恩惠的力量"
+  },
+  "赐福的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赐福的力量"
+  },
+  "卢恩的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卢恩的力量"
+  },
+  "锻造石的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "锻造石的力量"
+  },
+  "战灰的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "战灰的力量"
+  },
+  "骨灰的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "骨灰的力量"
+  },
+  "灵马的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "灵马的力量"
+  },
+  "黄金树守卫的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树守卫的力量"
+  },
+  "半神的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "半神的力量"
+  },
+  "龙的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙的力量"
+  },
+  "古龙的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "古龙的力量"
+  },
+  "火焰巨人的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "火焰巨人的力量"
+  },
+  "死诞者的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "死诞者的力量"
+  },
+  "祖灵的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "祖灵的力量"
+  },
+  "黑暗弃子的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑暗弃子的力量"
+  },
+  "永恒之城的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "永恒之城的力量"
+  },
+  "地下区域的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "地下区域的力量"
+  },
+  "天空之城的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "天空之城的力量"
+  },
+  "黄金树之影的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树之影的力量"
+  },
+  "米凯拉的圣树的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "米凯拉的圣树的力量"
+  },
+  "腐败湖的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "腐败湖的力量"
+  },
+  "猩红腐败的蔓延的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "猩红腐败的蔓延的力量"
+  },
+  "黑刀之夜的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑刀之夜的力量"
+  },
+  "黄金律法的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法的力量"
+  },
+  "艾尔登法环的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾尔登法环的力量"
+  },
+  "褪色者的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "褪色者的力量"
+  },
+  "半神之战的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "半神之战的力量"
+  },
+  "破碎战争的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "破碎战争的力量"
+  },
+  "黄金树守卫战的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树守卫战的力量"
+  },
+  "龙飨仪式的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙飨仪式的力量"
+  },
+  "米凯拉的圣树计划的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "米凯拉的圣树计划的力量"
+  },
+  "菈妮的群星计划的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "菈妮的群星计划的力量"
+  },
+  "癫火的毁灭的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "癫火的毁灭的力量"
+  },
+  "黄金律法的修复的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法的修复的力量"
+  },
+  "艾尔登法环的修复的力量": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾尔登法环的修复的力量"
+  },
+  "黄金树的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树的力量的源头"
+  },
+  "大卢恩的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大卢恩的力量的源头"
+  },
+  "猩红腐败的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "猩红腐败的力量的源头"
+  },
+  "重力魔法的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "重力魔法的源头"
+  },
+  "圣属性力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "圣属性力量的源头"
+  },
+  "暗月魔法的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "暗月魔法的源头"
+  },
+  "满月魔法的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "满月魔法的源头"
+  },
+  "火焰魔法的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "火焰魔法的源头"
+  },
+  "雷电力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "雷电力量的源头"
+  },
+  "龙飨力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙飨力量的源头"
+  },
+  "死灵力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "死灵力量的源头"
+  },
+  "黄金律法魔法的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法魔法的源头"
+  },
+  "黑刀力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑刀力量的源头"
+  },
+  "癫火力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "癫火力量的源头"
+  },
+  "群星力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "群星力量的源头"
+  },
+  "黄金树恩惠的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树恩惠的力量的源头"
+  },
+  "赐福的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赐福的力量的源头"
+  },
+  "卢恩的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卢恩的力量的源头"
+  },
+  "锻造石的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "锻造石的力量的源头"
+  },
+  "战灰的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "战灰的力量的源头"
+  },
+  "骨灰的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "骨灰的力量的源头"
+  },
+  "灵马的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "灵马的力量的源头"
+  },
+  "黄金树守卫的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树守卫的力量的源头"
+  },
+  "半神的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "半神的力量的源头"
+  },
+  "龙的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙的力量的源头"
+  },
+  "古龙的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "古龙的力量的源头"
+  },
+  "火焰巨人的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "火焰巨人的力量的源头"
+  },
+  "死诞者的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "死诞者的力量的源头"
+  },
+  "祖灵的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "祖灵的力量的源头"
+  },
+  "黑暗弃子的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑暗弃子的力量的源头"
+  },
+  "永恒之城的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "永恒之城的力量的源头"
+  },
+  "地下区域的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "地下区域的力量的源头"
+  },
+  "天空之城的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "天空之城的力量的源头"
+  },
+  "黄金树之影的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树之影的力量的源头"
+  },
+  "米凯拉的圣树的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "米凯拉的圣树的力量的源头"
+  },
+  "腐败湖的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "腐败湖的力量的源头"
+  },
+  "猩红腐败的蔓延的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "猩红腐败的蔓延的力量的源头"
+  },
+  "黑刀之夜的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑刀之夜的力量的源头"
+  },
+  "黄金律法的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法的力量的源头"
+  },
+  "艾尔登法环的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾尔登法环的力量的源头"
+  },
+  "褪色者的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "褪色者的力量的源头"
+  },
+  "半神之战的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "半神之战的力量的源头"
+  },
+  "破碎战争的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "破碎战争的力量的源头"
+  },
+  "黄金树守卫战的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金树守卫战的力量的源头"
+  },
+  "龙飨仪式的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙飨仪式的力量的源头"
+  },
+  "米凯拉的圣树计划的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "米凯拉的圣树计划的力量的源头"
+  },
+  "菈妮的群星计划的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "菈妮的群星计划的力量的源头"
+  },
+  "癫火的毁灭的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "癫火的毁灭的力量的源头"
+  },
+  "黄金律法的修复的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄金律法的修复的力量的源头"
+  },
+  "艾尔登法环的修复的力量的源头": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "艾尔登法环的修复的力量的源头"
+  },
+  "师父": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "师父"
+  },
+  "师祖": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "师祖"
+  },
+  "本门": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "本门"
+  },
+  "信香": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "信香"
+  },
+  "白骨丹": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "白骨丹"
+  },
+  "七级浮屠丹": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "七级浮屠丹"
+  },
+  "九转轮回丹": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "九转轮回丹"
+  },
+  "水缸": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "水缸"
+  },
+  "佛国": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "佛国"
+  },
+  "炼体训练": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "炼体训练"
+  },
+  "威慑系统": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-020",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "威慑系统"
+  },
+  "乡正": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "乡正"
+  },
+  "冯裁缝": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "冯裁缝"
+  },
+  "妖鸟": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "妖鸟"
+  },
+  "张观甲": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "张观甲"
+  },
+  "妖鸟事件": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "妖鸟事件"
+  },
+  "李华": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "李华"
+  },
+  "王明": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "王明"
+  },
+  "英语学习": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "英语学习"
+  },
+  "外国朋友": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-032"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "外国朋友"
+  },
+  "八位长老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "八位长老"
+  },
+  "双灵根弟子": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-011"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "双灵根弟子"
+  },
+  "小沙弥": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "小沙弥"
+  },
+  "上古蛮族血脉壮汉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "上古蛮族血脉壮汉"
+  },
+  "青木仙果": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "青木仙果"
+  },
+  "单身灵根": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "单身灵根"
+  },
+  "纯阳灵根": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 4,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "纯阳灵根"
+  },
+  "陈平安": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "陈平安"
+  },
+  "宁姚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "宁姚"
+  },
+  "剑来": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "剑来"
+  },
+  "剑气长城": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "剑气长城"
+  },
+  "阿良": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿良"
+  },
+  "齐静春": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "齐静春"
+  },
+  "剑道": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "剑道"
+  },
+  "大补丹": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大补丹"
+  },
+  "淬体药剂": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "淬体药剂"
+  },
+  "芦苇管": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "芦苇管"
+  },
+  "烫伤药": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "烫伤药"
+  },
+  "仙家洞天": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "仙家洞天"
+  },
+  "炼体": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "炼体"
+  },
+  "凡人常识": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "凡人常识"
+  },
+  "镖局": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "镖局"
+  },
+  "武学": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-021"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "武学"
+  },
+  "朱厌": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "朱厌"
+  },
+  "张观乙": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "张观乙"
+  },
+  "张观丙": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "张观丙"
+  },
+  "妖域": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "妖域"
+  },
+  "私塾": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-033"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "私塾"
+  },
+  "桃夭": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "桃夭"
+  },
+  "问道宗宗主": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "问道宗宗主"
+  },
+  "问道宗三长老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "问道宗三长老"
+  },
+  "羽化仙体": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "羽化仙体"
+  },
+  "三道考验": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "三道考验"
+  },
+  "李娜": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-012",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "李娜"
+  },
+  "储物空间": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "储物空间"
+  },
+  "灵兽肉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "灵兽肉"
+  },
+  "药浴": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "药浴"
+  },
+  "天材地宝": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "天材地宝"
+  },
+  "引气入体": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "引气入体"
+  },
+  "举重若轻": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "举重若轻"
+  },
+  "五行平衡": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "五行平衡"
+  },
+  "卡俄斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卡俄斯"
+  },
+  "盖亚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "盖亚"
+  },
+  "塔耳塔洛斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "塔耳塔洛斯"
+  },
+  "厄洛斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "厄洛斯"
+  },
+  "厄瑞玻斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "厄瑞玻斯"
+  },
+  "倪克斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "倪克斯"
+  },
+  "乌拉诺斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "乌拉诺斯"
+  },
+  "俄刻阿诺斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "俄刻阿诺斯"
+  },
+  "科俄斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "科俄斯"
+  },
+  "克利俄斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "克利俄斯"
+  },
+  "许珀里翁": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "许珀里翁"
+  },
+  "伊阿珀托斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "伊阿珀托斯"
+  },
+  "忒亚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "忒亚"
+  },
+  "瑞亚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "瑞亚"
+  },
+  "忒弥斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "忒弥斯"
+  },
+  "谟涅摩叙涅": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "谟涅摩叙涅"
+  },
+  "福柏": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "福柏"
+  },
+  "忒堤斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "忒堤斯"
+  },
+  "克洛诺斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "克洛诺斯"
+  },
+  "宙斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "宙斯"
+  },
+  "赫拉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赫拉"
+  },
+  "波塞冬": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "波塞冬"
+  },
+  "哈迪斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "哈迪斯"
+  },
+  "赫斯提亚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赫斯提亚"
+  },
+  "得墨忒耳": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "得墨忒耳"
+  },
+  "阿波罗": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿波罗"
+  },
+  "阿尔忒弥斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿尔忒弥斯"
+  },
+  "雅典娜": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "雅典娜"
+  },
+  "阿瑞斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿瑞斯"
+  },
+  "阿佛洛狄忒": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿佛洛狄忒"
+  },
+  "赫淮斯托斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赫淮斯托斯"
+  },
+  "赫尔墨斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赫尔墨斯"
+  },
+  "狄俄倪索斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "狄俄倪索斯"
+  },
+  "普罗米修斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "普罗米修斯"
+  },
+  "厄庇墨透斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "厄庇墨透斯"
+  },
+  "阿特拉斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿特拉斯"
+  },
+  "墨诺提俄斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "墨诺提俄斯"
+  },
+  "潘多拉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "潘多拉"
+  },
+  "赫拉克勒斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赫拉克勒斯"
+  },
+  "珀耳修斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "珀耳修斯"
+  },
+  "忒修斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "忒修斯"
+  },
+  "伊阿宋": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "伊阿宋"
+  },
+  "俄耳甫斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "俄耳甫斯"
+  },
+  "美狄亚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "美狄亚"
+  },
+  "卡珊德拉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卡珊德拉"
+  },
+  "阿喀琉斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿喀琉斯"
+  },
+  "赫克托耳": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赫克托耳"
+  },
+  "奥德修斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "奥德修斯"
+  },
+  "埃涅阿斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "埃涅阿斯"
+  },
+  "斯芬克斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "斯芬克斯"
+  },
+  "美杜莎": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "美杜莎"
+  },
+  "米诺陶洛斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "米诺陶洛斯"
+  },
+  "刻耳柏洛斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "刻耳柏洛斯"
+  },
+  "喀迈拉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "喀迈拉"
+  },
+  "许德拉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "许德拉"
+  },
+  "涅墨亚狮子": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "涅墨亚狮子"
+  },
+  "斯廷法利斯湖怪鸟": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "斯廷法利斯湖怪鸟"
+  },
+  "克里特公牛": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "克里特公牛"
+  },
+  "狄俄墨得斯牝马": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "狄俄墨得斯牝马"
+  },
+  "革律翁": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "革律翁"
+  },
+  "赫斯珀里得斯金苹果": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赫斯珀里得斯金苹果"
+  },
+  "金羊毛": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "金羊毛"
+  },
+  "潘多拉魔盒": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "潘多拉魔盒"
+  },
+  "奥林匹斯山": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "奥林匹斯山"
+  },
+  "冥界": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "冥界"
+  },
+  "特洛伊": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "特洛伊"
+  },
+  "伊萨卡": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "伊萨卡"
+  },
+  "雅典": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "雅典"
+  },
+  "斯巴达": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "斯巴达"
+  },
+  "克里特岛": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "克里特岛"
+  },
+  "德尔斐": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "德尔斐"
+  },
+  "厄琉西斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "厄琉西斯"
+  },
+  "忒拜": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "忒拜"
+  },
+  "阿尔戈斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿尔戈斯"
+  },
+  "迈锡尼": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "迈锡尼"
+  },
+  "科林斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "科林斯"
+  },
+  "埃特纳火山": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "埃特纳火山"
+  },
+  "赫利孔山": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赫利孔山"
+  },
+  "帕耳那索斯山": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "帕耳那索斯山"
+  },
+  "奥林匹亚": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "奥林匹亚"
+  },
+  "尼罗河": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "尼罗河"
+  },
+  "多瑙河": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "多瑙河"
+  },
+  "爱琴海": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "爱琴海"
+  },
+  "地中海": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "地中海"
+  },
+  "黑海": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黑海"
+  },
+  "赫勒斯滂海峡": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "赫勒斯滂海峡"
+  },
+  "奥林匹斯众神": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "奥林匹斯众神"
+  },
+  "泰坦神族": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "泰坦神族"
+  },
+  "阿尔戈英雄": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "阿尔戈英雄"
+  },
+  "特洛伊人": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "特洛伊人"
+  },
+  "希腊人": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "希腊人"
+  },
+  "命运三女神": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "命运三女神"
+  },
+  "缪斯女神": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "缪斯女神"
+  },
+  "复仇女神": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "复仇女神"
+  },
+  "美惠三女神": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "美惠三女神"
+  },
+  "时序女神": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "时序女神"
+  },
+  "奥林匹斯十二主神": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "奥林匹斯十二主神"
+  },
+  "提丰": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "提丰"
+  },
+  "厄喀德那": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "厄喀德那"
+  },
+  "斯库拉": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "斯库拉"
+  },
+  "卡律布狄斯": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "卡律布狄斯"
+  },
+  "塞壬": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "塞壬"
+  },
+  "独眼巨人": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "独眼巨人"
+  },
+  "百臂巨人": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "百臂巨人"
+  },
+  "宁芙": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "宁芙"
+  },
+  "萨提尔": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "萨提尔"
+  },
+  "半人马": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "半人马"
+  },
+  "鹰身女妖": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "鹰身女妖"
+  },
+  "格赖埃": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "格赖埃"
+  },
+  "戈尔贡": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "戈尔贡"
+  },
+  "幻境竹林": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-005"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "幻境竹林"
+  },
+  "千幻伞": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-034"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "千幻伞"
+  },
+  "龙凤变": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-013",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015"
+    ],
+    "count": 3,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "龙凤变"
+  },
+  "豆腐天尊": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "豆腐天尊"
+  },
+  "八长老": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "八长老"
+  },
+  "传承空间": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "传承空间"
+  },
+  "入梦法术": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "入梦法术"
+  },
+  "尚家": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "尚家"
+  },
+  "八字胡男子": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "八字胡男子"
+  },
+  "崔瀺": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "崔瀺"
+  },
+  "李宝瓶": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "李宝瓶"
+  },
+  "裴钱": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "裴钱"
+  },
+  "陈平安的剑": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-035"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "陈平安的剑"
+  },
+  "身份玉佩": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "身份玉佩"
+  },
+  "灵气": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-014"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "灵气"
+  },
+  "练气期": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "练气期"
+  },
+  "捏豆腐": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "捏豆腐"
+  },
+  "功法": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "功法"
+  },
+  "塞尔达": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-024"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "塞尔达"
+  },
+  "修仙界": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "修仙界"
+  },
+  "陆阳剑仙": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "陆阳剑仙"
+  },
+  "修仙日报": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "修仙日报"
+  },
+  "克劳德·莫奈": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "克劳德·莫奈"
+  },
+  "印象派": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "印象派"
+  },
+  "睡莲": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "睡莲"
+  },
+  "吉维尼": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "吉维尼"
+  },
+  "日出·印象": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "日出·印象"
+  },
+  "章管家": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "章管家"
+  },
+  "尚家家主": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "尚家家主"
+  },
+  "尚家小姐": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "尚家小姐"
+  },
+  "黄乡正": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-036"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "黄乡正"
+  },
+  "师兄": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "师兄"
+  },
+  "大陆堪舆论": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大陆堪舆论"
+  },
+  "凤族": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "凤族"
+  },
+  "大夏王朝": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "大夏王朝"
+  },
+  "妖族": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "妖族"
+  },
+  "鬼魅": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "鬼魅"
+  },
+  "威慑失效": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-015"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "威慑失效"
+  },
+  "苏烟": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "苏烟"
+  },
+  "世家弟子": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "世家弟子"
+  },
+  "化形果": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026",
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 2,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "化形果"
+  },
+  "双修功法": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "双修功法"
+  },
+  "武当派": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "武当派"
+  },
+  "京城": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-026"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "京城"
+  },
+  "鲲鹏": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "鲲鹏"
+  },
+  "混沌": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "混沌"
+  },
+  "金色佛国": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "金色佛国"
+  },
+  "极北之地": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "极北之地"
+  },
+  "魔道修士": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔道修士"
+  },
+  "邪魔": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "邪魔"
+  },
+  "灵石": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "灵石"
+  },
+  "藏经阁师姐": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "藏经阁师姐"
+  },
+  "百炼山": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "百炼山"
+  },
+  "食堂": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "食堂"
+  },
+  "超能力": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "超能力"
+  },
+  "城市中心": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "城市中心"
+  },
+  "双修之术": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "双修之术"
+  },
+  "双翅猛虎": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "双翅猛虎"
+  },
+  "李虹道长": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "李虹道长"
+  },
+  "锟铻山": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "锟铻山"
+  },
+  "魔道祭祀": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "魔道祭祀"
+  },
+  "李雷": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "李雷"
+  },
+  "韩梅梅": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "韩梅梅"
+  },
+  "学校": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1785471545,
+    "update_time": 1785471545,
+    "_id": "学校"
+  },
+  "自然": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-029"
+    ],
+    "count": 1,
+    "create_time": 1785471563,
+    "update_time": 1785471563,
+    "_id": "自然"
+  },
+  "炼器": {
+    "chunk_ids": [
+      "doc-4e684bd0f9c3b7977e1ef967541c3c6a-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1785471570,
+    "update_time": 1785471570,
+    "_id": "炼器"
+  }
+}
