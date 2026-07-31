@@ -2,14 +2,23 @@
 
 Date: 2026-07-30
 
-## 现状(骨架已完成 ✅)
+## 现状(step 1-2 已落地 + 开源 ✅)
 
 - 内核领域中立 schema 契约(`schemas/`):Entity/Relation/Mention/AttributeValue/Document/Segment/EntityProfile
-- core 管线接口骨架(`core/`):segment(已实现+测试)→embed→extract→normalize→profile→summarize→retrieve→ingest
-- 首个领域插件 novel(`plugins/novel/`):CharacterProfile(种族/身世/修为/功法/成仙路径)
-- 文档级隔离 store 骨架(`store/`)
-- 文档:architecture / references / contract
-- 9 tests pass,ruff/mypy 绿
+- core 管线(`core/`):segment/embed(contextual)/extract(并发)/normalize(名归一)/profile(KG聚合)/ingest(断点续跑)
+- 插件注册表(`plugins/registry.py`):entry points + 配置 + watch,热插拔可重定义
+- HTTP serve(`api.py`):/plugins /profile /retrieve /entities
+- 首个领域插件 novel(`plugins/novel/`):CharacterProfile(种族/身世/修为/道果/成仙)
+- store:VectorStore(sqlite-vec)+ KnowledgeStore(实体/关系,文档隔离)
+- 文档:architecture / references / contract / roadmap
+- 开源:https://github.com/AZSs/vega (MIT)
+- 46 tests pass,ruff/mypy 绿
+
+真跑《谁让他修仙的》1369 章全文建库 + 2227 块全量抽取验证:
+- 不朽仙子画像:race=人族(1830溯源)、不朽道果(668溯源)、575 条关系、2098 mentions
+- 权重名归一:不朽仙子(2058)为正名,黄豆豆并入,不朽仙人(另一人)独立
+- 灰豆豆:99 mentions,race=人族,origin=薪火王朝时期天庭之主,techniques=仙道杀拳/天魔解体大法
+- 每字段带 Mention 溯源,可回查原文(对抗 LLM 幻觉的核心价值)
 
 ## 起因(为什么有 vega)
 
@@ -30,7 +39,7 @@ vega 用「结构化画像 + 每字段挂 Mention 溯源」对抗幻觉:先把�
 **验证**:26 tests pass(分章/向量库/embed/ingest 全 TDD,注入 fake);CLI 烟测(Ollama 未启时优雅降级)。真实原作召回验证待 Ollama 启 + 原作文本。
 **改动**:中。
 
-### 2. 名归一 + 画像合成(纯逻辑 TDD)
+### 2. 名归一 + 画像合成(纯逻辑 TDD) ✅
 **价值**:vega 的核心产物——结构化 EntityProfile,带溯源。
 **要做**:
 - 名归一:别名/共指合并(merge_aliases + resolve_coreference),中文古风称呼规则
