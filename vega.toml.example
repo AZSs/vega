@@ -1,0 +1,21 @@
+# Vega 配置模板 —— 复制为 vega.toml 后按需修改
+# 优先级:CLI flag > 环境变量 > vega.toml > 默认值
+
+[llm]
+provider = "deepseek"                    # deepseek / openai / ollama
+model = "deepseek-chat"
+api_key = "${DEEPSEEK_API_KEY}"          # ${ENV_VAR} 引用,不硬编码密钥
+base_url = "https://api.deepseek.com"
+
+[llm.roles]
+# 按角色覆盖(继承 [llm],只改需不同的字段)
+# 抽取要强模型(DeepSeek),查询可用本地便宜的(Ollama)
+extract = { model = "deepseek-chat" }                # 实体抽取(强模型)
+profile = { model = "deepseek-chat" }                # 画像合成(强模型)
+query = { model = "qwen2.5:7b", provider = "ollama" } # 查询/问答(本地便宜)
+
+[embedding]
+provider = "ollama"
+model = "bge-m3"
+base_url = "http://localhost:11434"
+dim = 1024

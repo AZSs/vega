@@ -14,6 +14,7 @@ from collections.abc import Awaitable, Callable
 from typing import Any
 
 from ..plugins import DomainPlugin
+from .config import VegaConfig
 from .embed import EmbedFn
 from .llm import ChatFn
 
@@ -67,26 +68,35 @@ class LightRAGEngine:
         doc_id: str,
         plugin: DomainPlugin,
         *,
-        chat: ChatFn,
-        embed: EmbedFn,
+        chat: ChatFn | None = None,
+        embed: EmbedFn | None = None,
+        config: VegaConfig | None = None,
     ) -> None:
         from pathlib import Path
 
         from lightrag import LightRAG
 
+        from .config import load_config
+        from .embed import make_ollama_embedder
+        from .llm import make_chat_from_config
+
         self.doc_id = doc_id
         self.plugin = plugin
+        self.config = config or load_config()
         self.working_dir = Path(workdir) / doc_id / "lightrag"
         self.working_dir.mkdir(parents=True, exist_ok=True)
 
-        # 注入领域 entity_types 引导(插件→LightRAG)
+        # chat/embedd 优先用传入的,否则从 config 构造
+        chat_fn = chat or make_chat_from_config(self.config, "extract")
+        embed_fn = embed or make_ollama_embedder(
+            self.config.embedding.base_url, self.config.embedding.model
+        )
+
         guidance = "、".join(plugin.entity_types)
-        # 用插件 extract_prompt 的领域引导覆盖默认抽取 system prompt(保留 LightRAG 模板骨架)
-        # 仅注入领域类型,不破坏 LightRAG 的 JSON 输出契约
         self.rag = LightRAG(
             working_dir=str(self.working_dir),
-            llm_model_func=_wrap_llm(chat),
-            embedding_func=_wrap_embed(embed),
+            llm_model_func=_wrap_llm(chat_fn),
+            embedding_func=_wrap_embed(embed_fn),
             addon_params={"entity_types_guidance": guidance, "language": "Chinese"},
         )
         self._initialized = False

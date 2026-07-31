@@ -37,6 +37,7 @@ def main(argv: list[str] | None = None) -> int:
         default="self",
         help="底座:self=vega 自建(sqlite-vec+KG),lightrag=LightRAG 自主发现",
     )
+    p_ingest.add_argument("--config", default=None, help="vega.toml 配置路径")
 
     p_profile = sub.add_parser("profile", help="合成实体画像(召回片段→LLM 结构化)")
     p_profile.add_argument("doc_id")
@@ -55,6 +56,7 @@ def main(argv: list[str] | None = None) -> int:
         default="self",
         help="底座:lightrag=LightRAG 自主发现+结构化画像",
     )
+    p_profile.add_argument("--config", default=None, help="vega.toml 配置路径")
 
     p_query = sub.add_parser("query", help="语义检索:返回 top-k 相关片段")
     p_query.add_argument("doc_id")
@@ -119,17 +121,11 @@ async def _ingest(args: argparse.Namespace) -> int:
         text = "\n\n".join(s.text for s in document.segments[: args.limit])
 
     if args.backend == "lightrag":
-        from vega.core.embed import make_ollama_embedder
+        from vega.core.config import load_config
         from vega.core.lightrag_engine import LightRAGEngine
-        from vega.core.llm import make_chat_from_env
 
-        engine = LightRAGEngine(
-            args.workdir,
-            args.doc_id,
-            plugin,
-            chat=make_chat_from_env(),
-            embed=make_ollama_embedder(args.ollama_url, args.embed_model),
-        )
+        config = load_config(getattr(args, "config", None))
+        engine = LightRAGEngine(args.workdir, args.doc_id, plugin, config=config)
         await engine.ingest(text)
         entities = await engine.discover_entities()
         print(f"\n[vega-lightrag] 自主发现 {len(entities)} 实体(前 20):")
@@ -201,10 +197,12 @@ async def _profile(args: argparse.Namespace) -> int:
     plugin = load_plugin(args.plugin, getattr(args, "config", None))
 
     if args.backend == "lightrag":
+        from vega.core.config import load_config
         from vega.core.profile import build_profile_from_lightrag
 
+        config = load_config(getattr(args, "config", None))
         result = await build_profile_from_lightrag(
-            args.workdir, args.doc_id, args.entity, aliases, plugin
+            args.workdir, args.doc_id, args.entity, aliases, plugin, config=config
         )
         if result is None:
             print(f"[vega] LightRAG 中未找到 {args.entity}(先 vega ingest --backend lightrag?)")

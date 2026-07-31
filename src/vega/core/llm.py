@@ -8,10 +8,22 @@ from __future__ import annotations
 
 import os
 from collections.abc import Awaitable, Callable
+from typing import TYPE_CHECKING
 
 import httpx
 
+if TYPE_CHECKING:
+    from .config import VegaConfig
+    from .embed import EmbedFn
+
 ChatFn = Callable[[str, str], Awaitable[str]]
+
+
+def _role_llm_config(config: VegaConfig, role: str) -> tuple[str, str, str, str]:
+    """取某角色的 (provider, model, api_key, base_url)。"""
+    from .config import role_llm_config
+
+    return role_llm_config(config, role)
 
 
 def make_openai_chat(
@@ -54,4 +66,28 @@ def make_chat_from_env() -> ChatFn:
     return make_ollama_chat()
 
 
-__all__ = ["ChatFn", "make_openai_chat", "make_chat_from_env"]
+def make_chat_from_config(config: VegaConfig, role: str = "extract") -> ChatFn:
+    """按 vega.toml 配置 + 角色选 LLM 后端(extract/query/profile 可不同模型)。"""
+    from .embed import make_ollama_chat
+
+    provider, model, api_key, base_url = _role_llm_config(config, role)
+    if provider in ("deepseek", "openai") and api_key:
+        return make_openai_chat(api_key, base_url, model)
+    # fallback ollama
+    return make_ollama_chat(base_url or "http://localhost:11434", model)
+
+
+def make_embedder_from_config(config: VegaConfig) -> EmbedFn:
+    """按 vega.toml 配置构造 embedding 函数。"""
+    from .embed import make_ollama_embedder
+
+    return make_ollama_embedder(config.embedding.base_url, config.embedding.model)
+
+
+__all__ = [
+    "ChatFn",
+    "make_openai_chat",
+    "make_chat_from_env",
+    "make_chat_from_config",
+    "make_embedder_from_config",
+]

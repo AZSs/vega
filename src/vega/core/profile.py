@@ -205,6 +205,7 @@ async def build_profile_from_lightrag(
     aliases: list[str],
     plugin: DomainPlugin,
     chat_fn: ChatFn | None = None,
+    config: Any = None,
 ) -> dict[str, Any] | None:
     """从 LightRAG 底座聚合结构化画像(两层抽取)。
 
@@ -212,11 +213,13 @@ async def build_profile_from_lightrag(
     第二层 vega:对 source chunks 跑结构化 extract_prompt(race/dao_fruit/origin),
     带 chunk_key 溯源 → 聚合成结构化画像。
     """
-    from .embed import make_ollama_embedder
+    from .config import load_config
     from .lightrag_engine import LightRAGEngine
+    from .llm import make_chat_from_config
 
-    chat = chat_fn or make_chat_from_env()
-    engine = LightRAGEngine(workdir, doc_id, plugin, chat=chat, embed=make_ollama_embedder())
+    cfg = config or load_config()
+    chat = chat_fn or make_chat_from_config(cfg, "profile")
+    engine = LightRAGEngine(workdir, doc_id, plugin, chat=chat, config=cfg)
 
     # 收集实体(含别名)的 source chunks(LightRAG 自主发现 + 溯源)
     all_chunks: dict[str, str] = {}  # chunk_key -> text(去重)
