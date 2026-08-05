@@ -30,6 +30,7 @@ from .store import VectorStore
 
 _profile_semaphore = asyncio.Semaphore(2)
 _write_tasks: dict[str, dict[str, Any]] = {}  # task_id -> {process, logs, status}
+_ingest_status: dict[str, dict[str, Any]] = {}  # doc_id -> {status, graph_nodes, message}
 
 
 class RetrieveRequest(BaseModel):
@@ -195,7 +196,9 @@ def create_app(
         txt_path = doc_dir / "source.txt"
         txt_path.write_bytes(content)
 
-        # 异步触发 ingest(不阻塞响应)
+        # 异步触发 ingest(不阻塞响应),进度写入 _ingest_status 供 SSE 读
+        _ingest_status[doc_id] = {"status": "ingesting", "graph_nodes": 0, "message": "开始建库..."}
+
         async def _ingest() -> None:
             try:
                 from .core.config import load_config
@@ -204,11 +207,41 @@ def create_app(
                 cfg = load_config(config_path)
                 plug = load_plugin(plugin, config_path)
                 eng = LightRAGEngine(workdir, doc_id, plug, config=cfg)
+
+                # 轮询 graphml 节点数(轻量,ingest 过程中 graphml 会更新)
+                async def _poll_progress() -> None:
+                    while _ingest_status.get(doc_id, {}).get("status") == "ingesting":
+                        graphml = (
+                            Path(workdir)
+                            / doc_id
+                            / "lightrag"
+                            / "graph_chunk_entity_relation.graphml"
+                        )
+                        nodes = _count_graph_nodes(graphml)
+                        _ingest_status[doc_id] = {
+                            "status": "ingesting",
+                            "graph_nodes": nodes,
+                            "message": f"已发现 {nodes} 实体...",
+                        }
+                        await asyncio.sleep(3)
+
+                poll_task = asyncio.create_task(_poll_progress())
                 if shards > 1:
                     await eng.ingest_parallel(content.decode("utf-8"), shards=shards)
                 else:
                     await eng.ingest(content.decode("utf-8"))
+                poll_task.cancel()
+                graphml = (
+                    Path(workdir) / doc_id / "lightrag" / "graph_chunk_entity_relation.graphml"
+                )
+                nodes = _count_graph_nodes(graphml)
+                _ingest_status[doc_id] = {
+                    "status": "done",
+                    "graph_nodes": nodes,
+                    "message": f"完成,{nodes} 实体",
+                }
             except Exception as e:
+                _ingest_status[doc_id] = {"status": "failed", "graph_nodes": 0, "message": str(e)}
                 print(f"[upload] ingest 失败: {e}")
 
         asyncio.create_task(_ingest())
@@ -220,7 +253,7 @@ def create_app(
             return []
         result = []
         for d in sorted(Path(workdir).iterdir()):
-            if not d.is_dir() or d.name.startswith("."):
+            if not d.is_dir() or d.name.startswith(".") or "_shard_" in d.name:
                 continue
             graphml = d / "lightrag" / "graph_chunk_entity_relation.graphml"
             has_lr = graphml.exists()
@@ -259,6 +292,23 @@ def create_app(
             "graph_nodes": nodes,
             "shards_active": shard_count,
         }
+
+    @app.get("/api/docs/{doc_id}/ingest-stream")
+    async def ingest_stream(doc_id: str) -> StreamingResponse:
+        """SSE:实时推送 ingest 进度(实体数增长/完成/失败)。"""
+        from collections.abc import AsyncGenerator
+
+        async def stream() -> AsyncGenerator[str, None]:
+            while True:
+                status = _ingest_status.get(
+                    doc_id, {"status": "unknown", "graph_nodes": 0, "message": ""}
+                )
+                yield f"data: {json.dumps(status, ensure_ascii=False)}\n\n"
+                if status.get("status") in ("done", "failed", "unknown"):
+                    break
+                await asyncio.sleep(3)
+
+        return StreamingResponse(stream(), media_type="text/event-stream")
 
     @app.post("/api/docs/{doc_id}/write")
     async def trigger_write(doc_id: str, req: WriteRequest) -> dict[str, str]:
